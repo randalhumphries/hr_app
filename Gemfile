@@ -45,6 +45,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   # Use Faker for creating mock in testing
   gem 'faker'
+  # Use Factory Bot Rails to create mock objects in testing
+  gem 'factory_bot_rails'
 end
 
 group :development do

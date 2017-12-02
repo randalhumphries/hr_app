@@ -30,7 +30,6 @@ Add additional notes about how to deploy this on a live system
 
 * [Ruby 2.3.4](https://www.ruby-lang.org/en/) - The core language and a programmers's best friend. :)
 * [Rails 5.1.4](http://rubyonrails.org/) - The core web framework.
-* 
 
 ## Contributing
 
@@ -39,7 +38,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 Ruby and Rails style conventions are used for this project. All contributions should aim to follow accepted conventions and best practices.
 
 * [thoughtbot Ruby Style Guide](https://github.com/thoughtbot/guides/tree/master/style/ruby)
-* [thoughtbot Rails Doctrine](https://github.com/thoughtbot/guides/tree/master/style/rails)
+* [thoughtbot Rails Style Guide](https://github.com/thoughtbot/guides/tree/master/style/rails)
 * [The RSpec Style Guide](https://github.com/reachlocal/rspec-style-guide)
 
 ## Versioning
