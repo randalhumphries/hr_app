@@ -47,6 +47,8 @@ group :development, :test do
   gem 'faker'
   # Use Factory Bot Rails to create mock objects in testing
   gem 'factory_bot_rails'
+  # Use SimpleCov for test coverage
+  gem 'simplecov', require: false
 end
 
 group :development do

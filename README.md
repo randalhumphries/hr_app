@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/345bb65f72680e693aca/maintainability)](https://codeclimate.com/github/randalhumphries/hr_app/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/345bb65f72680e693aca/test_coverage)](https://codeclimate.com/github/randalhumphries/hr_app/test_coverage)
+
 # HR App
 
 A human resources app for healthcare organizations. It is designed with the various data that healthcare organizations have to track for both regulatory compliance and efficient management of their employees, contract workers, and the like.
