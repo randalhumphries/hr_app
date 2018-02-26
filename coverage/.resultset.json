@@ -193,6 +193,13 @@
         null,
         null
       ],
+      "/Users/randal/Projects/hr_app/spec/factories/races.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/randal/Projects/hr_app/config/routes.rb": [
         1,
         null,
@@ -288,8 +295,28 @@
         1,
         1,
         null
+      ],
+      "/Users/randal/Projects/hr_app/spec/models/race_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/app/models/race.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1519680543
+    "timestamp": 1519685974
   }
 }
