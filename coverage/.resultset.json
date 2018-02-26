@@ -165,6 +165,13 @@
         null,
         null
       ],
+      "/Users/randal/Projects/hr_app/spec/factories/companies.rb": [
+        1,
+        1,
+        2,
+        null,
+        null
+      ],
       "/Users/randal/Projects/hr_app/spec/factories/employees.rb": [
         1,
         1,
@@ -200,6 +207,40 @@
         1,
         null
       ],
+      "/Users/randal/Projects/hr_app/app/models/company.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/spec/models/employee_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/randal/Projects/hr_app/app/models/employee.rb": [
         1,
         1,
@@ -222,11 +263,6 @@
         1,
         null,
         null,
-        null
-      ],
-      "/Users/randal/Projects/hr_app/app/models/application_record.rb": [
-        1,
-        1,
         null
       ],
       "/Users/randal/Projects/hr_app/spec/models/person_spec.rb": [
@@ -254,6 +290,6 @@
         null
       ]
     },
-    "timestamp": 1519675708
+    "timestamp": 1519680543
   }
 }
