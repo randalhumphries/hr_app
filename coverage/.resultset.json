@@ -182,6 +182,13 @@
         null,
         null
       ],
+      "/Users/randal/Projects/hr_app/spec/factories/ethnicities.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/randal/Projects/hr_app/spec/factories/people.rb": [
         1,
         1,
@@ -272,6 +279,26 @@
         null,
         null
       ],
+      "/Users/randal/Projects/hr_app/spec/models/ethnicity_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/app/models/ethnicity.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/randal/Projects/hr_app/spec/models/person_spec.rb": [
         1,
         null,
@@ -317,6 +344,6 @@
         null
       ]
     },
-    "timestamp": 1519685974
+    "timestamp": 1519745497
   }
 }
