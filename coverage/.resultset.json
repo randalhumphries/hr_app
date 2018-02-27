@@ -165,6 +165,15 @@
         null,
         null
       ],
+      "/Users/randal/Projects/hr_app/spec/factories/benefit_types.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/randal/Projects/hr_app/spec/factories/companies.rb": [
         1,
         1,
@@ -235,12 +244,32 @@
         1,
         null
       ],
-      "/Users/randal/Projects/hr_app/app/models/company.rb": [
+      "/Users/randal/Projects/hr_app/app/models/benefit_type.rb": [
         1,
         1,
         null
       ],
       "/Users/randal/Projects/hr_app/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/spec/models/company_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/app/models/company.rb": [
         1,
         1,
         null
@@ -398,6 +427,6 @@
         null
       ]
     },
-    "timestamp": 1519749065
+    "timestamp": 1519769432
   }
 }
