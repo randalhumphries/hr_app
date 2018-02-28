@@ -13,8 +13,12 @@ env:
     - chmod +x ./cc-test-reporter
     - ./cc-test-reporter before-build
 
+  services: postgresql
+
   script:
-    - bundle exec rspec spec
+    - RAILS_ENV=test bundle exec rails db:migrate --trace
+    - bundle exec rails db:test:prepare
+    - bundle exec rails
 
   after_script:
     - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
