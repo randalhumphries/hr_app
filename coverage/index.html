@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-02-28T11:07:23-05:00">2018-02-28T11:07:23-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-02-28T11:17:30-05:00">2018-02-28T11:17:30-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.27
+         1.24
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>42</b> files in total.
-    <b>157</b> relevant lines. 
-    <span class="green"><b>157</b> lines covered</span> and
+    <b>45</b> files in total.
+    <b>174</b> relevant lines. 
+    <span class="green"><b>174</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -152,6 +152,16 @@
       
       <tr>
         <td class="strong"><a href="#a6dc263afc7d9212a85a19ea0dae531ea95fb165" class="src_link" title="app/models/relationship_type.rb">app/models/relationship_type.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>3</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#4c95178aaf9d3d564bfab334e37aff72213b2224" class="src_link" title="app/models/remuneration_type.rb">app/models/remuneration_type.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>3</td>
         <td>2</td>
@@ -381,6 +391,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#ff4f535bf6bfce660ded3bda805ab4ee74198ebe" class="src_link" title="spec/factories/remuneration_types.rb">spec/factories/remuneration_types.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>7</td>
+        <td>5</td>
+        <td>5</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#439e86b13d72348c9d80a4225981fe3730781412" class="src_link" title="spec/models/certification_type_spec.rb">spec/models/certification_type_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>17</td>
@@ -456,6 +476,16 @@
         <td>13</td>
         <td>6</td>
         <td>6</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#4b6612a0074cfdcc0a8e58b64c51fff26f8fab04" class="src_link" title="spec/models/remuneration_type_spec.rb">spec/models/remuneration_type_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>21</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -988,6 +1018,43 @@
           <span class="hits">1</span>
           
           <code class="ruby">  validates :name, presence: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="4c95178aaf9d3d564bfab334e37aff72213b2224">
+  <div class="header">
+    <h3>app/models/remuneration_type.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class RemunerationType &lt; ApplicationRecord</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates :name, :pay_period_hours, :annual_pay_periods, presence: true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
@@ -2613,6 +2680,67 @@
 </div>
 
       
+        <div class="source_table" id="ff4f535bf6bfce660ded3bda805ab4ee74198ebe">
+  <div class="header">
+    <h3>spec/factories/remuneration_types.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">FactoryBot.define do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  factory :remuneration_type do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    name               &quot;Salary&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    pay_period_hours   80</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    annual_pay_periods 26</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="439e86b13d72348c9d80a4225981fe3730781412">
   <div class="header">
     <h3>spec/models/certification_type_spec.rb</h3>
@@ -3481,6 +3609,151 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="4b6612a0074cfdcc0a8e58b64c51fff26f8fab04">
+  <div class="header">
+    <h3>spec/models/remuneration_type_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe RemunerationType, type: :model do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;is valid with valid attributes&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(build(:remuneration_type)).to be_valid</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;is not valid without a name&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(build(:remuneration_type, name: nil)).not_to be_valid</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;is not valid without pay period hours&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(build(:remuneration_type, pay_period_hours: nil)).not_to be_valid</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;is not valid without annual pay periods&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(build(:remuneration_type, annual_pay_periods: nil)).not_to be_valid</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">end</code>
