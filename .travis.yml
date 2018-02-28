@@ -8,6 +8,7 @@ env:
   before_install: gem install bundler -v 1.16.1
 
   before_script:
+    - echo "Before Script Commands"
     - cp config/database.yml.travis config/database.yml
     - psql -c "CREATE DATABASE travis_ci_test;" -U postgres
     - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -17,9 +18,9 @@ env:
   services: postgresql
 
   script:
-    - RAILS_ENV=test bundle exec rails db:migrate --trace
-    - bundle exec rails db:test:prepare
-    - bundle exec rails
+    - RAILS_ENV=test bundle exec rake db:migrate --trace
+    - bundle exec rake db:test:prepare
+    - bundle exec rake
 
   after_script:
     - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
