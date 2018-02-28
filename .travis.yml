@@ -7,16 +7,13 @@ env:
     - 2.5.0
   before_install: gem install bundler -v 1.16.1
 
-  services:
-    - postgresql
-
   before_script:
     - psql -c "CREATE DATABASE hr_app_test;" -U postgres
     - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
     - chmod +x ./cc-test-reporter
     - ./cc-test-reporter before-build
 
-  scripts:
+  script:
     - bundle exec rspec spec
 
   after_script:
