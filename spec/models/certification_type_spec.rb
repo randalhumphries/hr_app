@@ -6,6 +6,10 @@ RSpec.describe CertificationType, type: :model do
     expect(build(:certification_type)).to be_valid
   end
 
+  it 'is not valid without a name' do
+    expect(build(:certification_type, name: nil)).not_to be_valid
+  end
+
   it 'is not valid without an effective interval' do
     expect(build(:certification_type, effective_interval: nil)).not_to be_valid
   end

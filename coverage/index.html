@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-02-28T11:17:30-05:00">2018-02-28T11:17:30-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-02-28T11:49:29-05:00">2018-02-28T11:49:29-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.24
+         1.3
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>45</b> files in total.
-    <b>174</b> relevant lines. 
-    <span class="green"><b>174</b> lines covered</span> and
+    <b>48</b> files in total.
+    <b>188</b> relevant lines. 
+    <span class="green"><b>188</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -101,6 +101,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#8e820c56a620d8ef7e1cae0ec5719983a8ec6029" class="src_link" title="app/models/company_unit.rb">app/models/company_unit.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>3</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#4e1f592a069fe2f5af3165295d86673c18c489b9" class="src_link" title="app/models/contact_type.rb">app/models/contact_type.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>3</td>
@@ -117,7 +127,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>1.5</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -331,6 +341,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#0f6c76a171438f6e0c8cac17ad9f78773b9c86ef" class="src_link" title="spec/factories/company_units.rb">spec/factories/company_units.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>6</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#5e55bb70238436b14543580ca0661861323e1dff" class="src_link" title="spec/factories/contact_types.rb">spec/factories/contact_types.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>5</td>
@@ -347,7 +367,7 @@
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>1.2</td>
+        <td>1.5</td>
       </tr>
       
       <tr>
@@ -367,7 +387,7 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>5.7</td>
+        <td>7.1</td>
       </tr>
       
       <tr>
@@ -403,15 +423,25 @@
       <tr>
         <td class="strong"><a href="#439e86b13d72348c9d80a4225981fe3730781412" class="src_link" title="spec/models/certification_type_spec.rb">spec/models/certification_type_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>17</td>
-        <td>8</td>
-        <td>8</td>
+        <td>21</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#3ce94d9c93bcb0e6efa0554023d1f148c87f51a9" class="src_link" title="spec/models/company_spec.rb">spec/models/company_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>13</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#fb7bbbefb41243eeeceb5a0d235cfc9c9588be65" class="src_link" title="spec/models/company_unit_spec.rb">spec/models/company_unit_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>13</td>
         <td>6</td>
@@ -644,7 +674,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :effective_interval, :effective_interval_unit, presence: true</code>
+          <code class="ruby">  validates :name, :effective_interval, :effective_interval_unit, presence: true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
@@ -676,6 +706,43 @@
           <span class="hits">1</span>
           
           <code class="ruby">class Company &lt; ApplicationRecord</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates :name, presence: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="8e820c56a620d8ef7e1cae0ec5719983a8ec6029">
+  <div class="header">
+    <h3>app/models/company_unit.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class CompanyUnit &lt; ApplicationRecord</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="2">
@@ -812,8 +879,8 @@
           <code class="ruby">    def hire_date_valid?</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="12">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="12">
+          <span class="hits">6</span>
           
           <code class="ruby">      if temp_hire_at.present? &amp;&amp; temp_hire_at &gt; Date.today</code>
         </li>
@@ -848,8 +915,8 @@
           <code class="ruby">    def create_temp_hire_date</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="18">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="18">
+          <span class="hits">6</span>
           
           <code class="ruby">      if full_time_hire_at.present? &amp;&amp; temp_hire_at.present? == false</code>
         </li>
@@ -2344,6 +2411,61 @@
 </div>
 
       
+        <div class="source_table" id="0f6c76a171438f6e0c8cac17ad9f78773b9c86ef">
+  <div class="header">
+    <h3>spec/factories/company_units.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">FactoryBot.define do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  factory :company_unit do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    name    &quot;Billing&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    association :manager, factory: :employee</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="5e55bb70238436b14543580ca0661861323e1dff">
   <div class="header">
     <h3>spec/factories/contact_types.rb</h3>
@@ -2425,8 +2547,8 @@
           <code class="ruby">    active            true</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="4">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="4">
+          <span class="hits">4</span>
           
           <code class="ruby">    temp_hire_at      { Date.today }</code>
         </li>
@@ -2535,32 +2657,32 @@
           <code class="ruby">  factory :person do</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="3">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="9" data-linenumber="3">
+          <span class="hits">9</span>
           
           <code class="ruby">    first_name { Faker::Name.first_name }</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="4">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="10" data-linenumber="4">
+          <span class="hits">10</span>
           
           <code class="ruby">    middle_name { Faker::Name.first_name }</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="5">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="9" data-linenumber="5">
+          <span class="hits">9</span>
           
           <code class="ruby">    last_name { Faker::Name.last_name }</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="6">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="10" data-linenumber="6">
+          <span class="hits">10</span>
           
           <code class="ruby">    prefix { Faker::Name.prefix }</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="7">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="10" data-linenumber="7">
+          <span class="hits">10</span>
           
           <code class="ruby">    suffix { Faker::Name.suffix }</code>
         </li>
@@ -2746,8 +2868,8 @@
     <h3>spec/models/certification_type_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2806,13 +2928,13 @@
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &#39;is not valid without an effective interval&#39; do</code>
+          <code class="ruby">  it &#39;is not valid without a name&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(build(:certification_type, effective_interval: nil)).not_to be_valid</code>
+          <code class="ruby">    expect(build(:certification_type, name: nil)).not_to be_valid</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
@@ -2830,13 +2952,13 @@
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &#39;is not valid without an effective interval unit&#39; do</code>
+          <code class="ruby">  it &#39;is not valid without an effective interval&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(build(:certification_type, effective_interval_unit: nil)).not_to be_valid</code>
+          <code class="ruby">    expect(build(:certification_type, effective_interval: nil)).not_to be_valid</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
@@ -2848,10 +2970,34 @@
         <li class="never" data-hits="" data-linenumber="16">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;is not valid without an effective interval unit&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(build(:certification_type, effective_interval_unit: nil)).not_to be_valid</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
           <code class="ruby">  </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">end</code>
@@ -2934,6 +3080,103 @@
           <span class="hits">1</span>
           
           <code class="ruby">    expect(build(:company, name: nil)).not_to be_valid</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="fb7bbbefb41243eeeceb5a0d235cfc9c9588be65">
+  <div class="header">
+    <h3>spec/models/company_unit_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe CompanyUnit, type: :model do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;is valid with valid attributes&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(build(:company_unit)).to be_valid</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;is not valid without a name&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(build(:company_unit, name: nil)).not_to be_valid</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">

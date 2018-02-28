@@ -190,6 +190,14 @@
         null,
         null
       ],
+      "/Users/randal/Projects/hr_app/spec/factories/company_units.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/randal/Projects/hr_app/spec/factories/contact_types.rb": [
         1,
         1,
@@ -201,7 +209,7 @@
         1,
         1,
         1,
-        2,
+        4,
         1,
         1,
         null,
@@ -217,11 +225,11 @@
       "/Users/randal/Projects/hr_app/spec/factories/people.rb": [
         1,
         1,
-        7,
-        8,
-        7,
-        8,
-        8,
+        9,
+        10,
+        9,
+        10,
+        10,
         null,
         null
       ],
@@ -289,6 +297,10 @@
         1,
         null,
         null,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/randal/Projects/hr_app/app/models/certification_type.rb": [
@@ -312,6 +324,26 @@
         null
       ],
       "/Users/randal/Projects/hr_app/app/models/company.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/spec/models/company_unit_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/app/models/company_unit.rb": [
         1,
         1,
         null
@@ -372,13 +404,13 @@
         1,
         null,
         1,
-        4,
+        6,
         1,
         null,
         null,
         null,
         1,
-        4,
+        6,
         1,
         null,
         null,
@@ -497,6 +529,6 @@
         null
       ]
     },
-    "timestamp": 1519834650
+    "timestamp": 1519836569
   }
 }
