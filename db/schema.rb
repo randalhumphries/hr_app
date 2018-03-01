@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180228162541) do
+ActiveRecord::Schema.define(version: 20180301184042) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "assignment_types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "benefit_types", force: :cascade do |t|
     t.string "name"
@@ -23,12 +29,38 @@ ActiveRecord::Schema.define(version: 20180228162541) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "benefits", force: :cascade do |t|
+    t.bigint "employee_id"
+    t.bigint "benefit_type_id"
+    t.date "eligible_at"
+    t.date "notified_at"
+    t.integer "updated_by"
+    t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["benefit_type_id"], name: "index_benefits_on_benefit_type_id"
+    t.index ["employee_id"], name: "index_benefits_on_employee_id"
+  end
+
   create_table "certification_types", force: :cascade do |t|
     t.string "name"
     t.integer "effective_interval"
     t.string "effective_interval_unit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "certifications", force: :cascade do |t|
+    t.bigint "employee_id"
+    t.bigint "certification_type_id"
+    t.string "certification_number"
+    t.date "renewed_at"
+    t.date "expires_at"
+    t.integer "updated_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["certification_type_id"], name: "index_certifications_on_certification_type_id"
+    t.index ["employee_id"], name: "index_certifications_on_employee_id"
   end
 
   create_table "companies", force: :cascade do |t|
@@ -96,6 +128,27 @@ ActiveRecord::Schema.define(version: 20180228162541) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "remunerations", force: :cascade do |t|
+    t.bigint "employee_id"
+    t.bigint "remuneration_type_id"
+    t.integer "updated_by"
+    t.decimal "pay_period_salary"
+    t.decimal "annual_salary"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["employee_id"], name: "index_remunerations_on_employee_id"
+    t.index ["remuneration_type_id"], name: "index_remunerations_on_remuneration_type_id"
+  end
+
+  add_foreign_key "benefits", "benefit_types"
+  add_foreign_key "benefits", "employees"
+  add_foreign_key "benefits", "employees", column: "updated_by"
+  add_foreign_key "certifications", "certification_types"
+  add_foreign_key "certifications", "employees"
+  add_foreign_key "certifications", "employees", column: "updated_by"
   add_foreign_key "company_units", "employees", column: "manager"
   add_foreign_key "employees", "people"
+  add_foreign_key "remunerations", "employees"
+  add_foreign_key "remunerations", "employees", column: "updated_by"
+  add_foreign_key "remunerations", "remuneration_types"
 end
