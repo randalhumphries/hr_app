@@ -288,10 +288,11 @@
       "/Users/randal/Projects/hr_app/spec/factories/people.rb": [
         1,
         1,
-        34,
         35,
-        34,
+        36,
         35,
+        36,
+        36,
         35,
         null,
         null
@@ -682,6 +683,10 @@
         1,
         null,
         null,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/randal/Projects/hr_app/app/models/person.rb": [
@@ -784,6 +789,6 @@
         null
       ]
     },
-    "timestamp": 1519941633
+    "timestamp": 1519941950
   }
 }
