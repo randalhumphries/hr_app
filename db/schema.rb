@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301184042) do
+ActiveRecord::Schema.define(version: 20180301191155) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,18 @@ ActiveRecord::Schema.define(version: 20180301184042) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "assignments", force: :cascade do |t|
+    t.bigint "assignment_type_id"
+    t.integer "employee"
+    t.date "assigned_at"
+    t.integer "assigned_by"
+    t.bigint "company_unit_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["assignment_type_id"], name: "index_assignments_on_assignment_type_id"
+    t.index ["company_unit_id"], name: "index_assignments_on_company_unit_id"
   end
 
   create_table "benefit_types", force: :cascade do |t|
@@ -140,6 +152,9 @@ ActiveRecord::Schema.define(version: 20180301184042) do
     t.index ["remuneration_type_id"], name: "index_remunerations_on_remuneration_type_id"
   end
 
+  add_foreign_key "assignments", "assignment_types"
+  add_foreign_key "assignments", "company_units"
+  add_foreign_key "assignments", "employees", column: "assigned_by"
   add_foreign_key "benefits", "benefit_types"
   add_foreign_key "benefits", "employees"
   add_foreign_key "benefits", "employees", column: "updated_by"

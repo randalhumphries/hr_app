@@ -172,6 +172,17 @@
         null,
         null
       ],
+      "/Users/randal/Projects/hr_app/spec/factories/assignments.rb": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/randal/Projects/hr_app/spec/factories/benefit_types.rb": [
         1,
         1,
@@ -240,7 +251,7 @@
         1,
         1,
         1,
-        17,
+        23,
         1,
         1,
         null,
@@ -256,11 +267,11 @@
       "/Users/randal/Projects/hr_app/spec/factories/people.rb": [
         1,
         1,
-        22,
-        23,
-        22,
-        23,
-        23,
+        28,
+        29,
+        28,
+        29,
+        29,
         null,
         null
       ],
@@ -311,12 +322,35 @@
         1,
         null
       ],
-      "/Users/randal/Projects/hr_app/app/models/assignment_type.rb": [
+      "/Users/randal/Projects/hr_app/app/models/assignment.rb": [
+        1,
+        1,
+        null,
         1,
         1,
         null
       ],
       "/Users/randal/Projects/hr_app/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/spec/models/assignment_type_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/app/models/assignment_type.rb": [
         1,
         1,
         null
@@ -523,13 +557,13 @@
         1,
         null,
         1,
-        19,
+        25,
         1,
         null,
         null,
         null,
         1,
-        19,
+        25,
         1,
         null,
         null,
@@ -674,6 +708,6 @@
         null
       ]
     },
-    "timestamp": 1519929853
+    "timestamp": 1519931771
   }
 }
