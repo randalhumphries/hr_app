@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-01T17:05:50-05:00">2018-03-01T17:05:50-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-01T18:11:47-05:00">2018-03-01T18:11:47-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.01
+         2.05
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>69</b> files in total.
-    <b>316</b> relevant lines. 
-    <span class="green"><b>316</b> lines covered</span> and
+    <b>72</b> files in total.
+    <b>333</b> relevant lines. 
+    <span class="green"><b>333</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -171,6 +171,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#fceecf40e85a05a2854ec398173da11f5678ac0f" class="src_link" title="app/models/demographic.rb">app/models/demographic.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>7</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#f0da2759e9f5eda30f9339fc3a3f38b1b05da2a5" class="src_link" title="app/models/emergency_contact.rb">app/models/emergency_contact.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>7</td>
@@ -187,7 +197,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>6.0</td>
+        <td>6.5</td>
       </tr>
       
       <tr>
@@ -481,13 +491,23 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#74aea76de5d2052f024be3e3a983b83c320601ca" class="src_link" title="spec/factories/demographics.rb">spec/factories/demographics.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>9</td>
+        <td>7</td>
+        <td>7</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#3f31762e686fff7328a669eebbe040e670a570af" class="src_link" title="spec/factories/emergency_contacts.rb">spec/factories/emergency_contacts.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>10</td>
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>2.1</td>
+        <td>2.5</td>
       </tr>
       
       <tr>
@@ -497,7 +517,7 @@
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>5.7</td>
+        <td>6.2</td>
       </tr>
       
       <tr>
@@ -517,7 +537,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>26.9</td>
+        <td>29.1</td>
       </tr>
       
       <tr>
@@ -646,6 +666,16 @@
         <td>13</td>
         <td>6</td>
         <td>6</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#fa3b0032859054ad28ad69d32271ef6bc4afafd8" class="src_link" title="spec/models/demographic_spec.rb">spec/models/demographic_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>9</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -1266,6 +1296,67 @@
 </div>
 
       
+        <div class="source_table" id="fceecf40e85a05a2854ec398173da11f5678ac0f">
+  <div class="header">
+    <h3>app/models/demographic.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Demographic &lt; ApplicationRecord</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :employee</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :race</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :ethnicity</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :contact</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :emergency_contact</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="f0da2759e9f5eda30f9339fc3a3f38b1b05da2a5">
   <div class="header">
     <h3>app/models/emergency_contact.rb</h3>
@@ -1407,8 +1498,8 @@
           <code class="ruby">    def hire_date_valid?</code>
         </li>
       
-        <li class="covered" data-hits="31" data-linenumber="12">
-          <span class="hits">31</span>
+        <li class="covered" data-hits="34" data-linenumber="12">
+          <span class="hits">34</span>
           
           <code class="ruby">      if temp_hire_at.present? &amp;&amp; temp_hire_at &gt; Date.today</code>
         </li>
@@ -1443,8 +1534,8 @@
           <code class="ruby">    def create_temp_hire_date</code>
         </li>
       
-        <li class="covered" data-hits="31" data-linenumber="18">
-          <span class="hits">31</span>
+        <li class="covered" data-hits="34" data-linenumber="18">
+          <span class="hits">34</span>
           
           <code class="ruby">      if full_time_hire_at.present? &amp;&amp; temp_hire_at.present? == false</code>
         </li>
@@ -3433,6 +3524,79 @@
 </div>
 
       
+        <div class="source_table" id="74aea76de5d2052f024be3e3a983b83c320601ca">
+  <div class="header">
+    <h3>spec/factories/demographics.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">FactoryBot.define do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  factory :demographic do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    employee</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    race</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    ethnicity</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    contact</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    emergency_contact</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="3f31762e686fff7328a669eebbe040e670a570af">
   <div class="header">
     <h3>spec/factories/emergency_contacts.rb</h3>
@@ -3471,14 +3635,14 @@
           <code class="ruby">    relationship_type</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="5">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="5">
+          <span class="hits">5</span>
           
           <code class="ruby">    first_name    { Faker::Name.first_name }</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="6">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="6">
+          <span class="hits">5</span>
           
           <code class="ruby">    last_name     { Faker::Name.last_name }</code>
         </li>
@@ -3489,8 +3653,8 @@
           <code class="ruby">    contact_type</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="8">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="8">
+          <span class="hits">5</span>
           
           <code class="ruby">    contact       { Faker::Internet.email }</code>
         </li>
@@ -3544,8 +3708,8 @@
           <code class="ruby">    active            true</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="4">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="32" data-linenumber="4">
+          <span class="hits">32</span>
           
           <code class="ruby">    temp_hire_at      { Date.today }</code>
         </li>
@@ -3654,38 +3818,38 @@
           <code class="ruby">  factory :person do</code>
         </li>
       
-        <li class="covered" data-hits="35" data-linenumber="3">
-          <span class="hits">35</span>
+        <li class="covered" data-hits="38" data-linenumber="3">
+          <span class="hits">38</span>
           
           <code class="ruby">    first_name    { Faker::Name.first_name }</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="4">
-          <span class="hits">36</span>
+        <li class="covered" data-hits="39" data-linenumber="4">
+          <span class="hits">39</span>
           
           <code class="ruby">    middle_name   { Faker::Name.first_name }</code>
         </li>
       
-        <li class="covered" data-hits="35" data-linenumber="5">
-          <span class="hits">35</span>
+        <li class="covered" data-hits="38" data-linenumber="5">
+          <span class="hits">38</span>
           
           <code class="ruby">    last_name     { Faker::Name.last_name }</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="6">
-          <span class="hits">36</span>
+        <li class="covered" data-hits="39" data-linenumber="6">
+          <span class="hits">39</span>
           
           <code class="ruby">    prefix        { Faker::Name.prefix }</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="7">
-          <span class="hits">36</span>
+        <li class="covered" data-hits="39" data-linenumber="7">
+          <span class="hits">39</span>
           
           <code class="ruby">    suffix        { Faker::Name.suffix }</code>
         </li>
       
-        <li class="covered" data-hits="35" data-linenumber="8">
-          <span class="hits">35</span>
+        <li class="covered" data-hits="38" data-linenumber="8">
+          <span class="hits">38</span>
           
           <code class="ruby">    date_of_birth { Faker::Date.birthday(18, 65) }</code>
         </li>
@@ -4916,6 +5080,79 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="fa3b0032859054ad28ad69d32271ef6bc4afafd8">
+  <div class="header">
+    <h3>spec/models/demographic_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe Demographic, type: :model do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;is valid with valid attributes&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(build(:demographic)).to be_valid</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">end</code>
