@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301173958) do
+ActiveRecord::Schema.define(version: 20180301180942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -109,9 +109,24 @@ ActiveRecord::Schema.define(version: 20180301173958) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "remunerations", force: :cascade do |t|
+    t.bigint "employee_id"
+    t.bigint "remuneration_type_id"
+    t.integer "updated_by"
+    t.decimal "pay_period_salary"
+    t.decimal "annual_salary"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["employee_id"], name: "index_remunerations_on_employee_id"
+    t.index ["remuneration_type_id"], name: "index_remunerations_on_remuneration_type_id"
+  end
+
   add_foreign_key "benefits", "benefit_types"
   add_foreign_key "benefits", "employees"
   add_foreign_key "benefits", "employees", column: "updated_by"
   add_foreign_key "company_units", "employees", column: "manager"
   add_foreign_key "employees", "people"
+  add_foreign_key "remunerations", "employees"
+  add_foreign_key "remunerations", "employees", column: "updated_by"
+  add_foreign_key "remunerations", "remuneration_types"
 end
