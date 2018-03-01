@@ -1,5 +1,5 @@
 global:
-  - CC_TEST_REPORTER_ID=1ba40ee4508ab451516c65cdd01a181452c0e5b3a99354ac873f265ecfe6cbff
+  - CC_TEST_REPORTER_ID=CC_TEST_REPORTER_ID
 
 language:
   - ruby
@@ -12,7 +12,6 @@ before_install:
   - psql -c "CREATE DATABASE travis_ci_test;" -U postgres
 
 before_script:
-  - echo "Before Script Commands"
   - cp config/database.yml.travis config/database.yml
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
