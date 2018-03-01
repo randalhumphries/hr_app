@@ -247,6 +247,15 @@
         null,
         null
       ],
+      "/Users/randal/Projects/hr_app/spec/factories/contacts.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/randal/Projects/hr_app/spec/factories/emergency_contacts.rb": [
         1,
         1,
@@ -263,7 +272,7 @@
         1,
         1,
         1,
-        27,
+        29,
         1,
         1,
         null,
@@ -279,11 +288,12 @@
       "/Users/randal/Projects/hr_app/spec/factories/people.rb": [
         1,
         1,
-        32,
-        33,
-        32,
-        33,
-        33,
+        35,
+        36,
+        35,
+        36,
+        36,
+        35,
         null,
         null
       ],
@@ -513,6 +523,29 @@
         1,
         null
       ],
+      "/Users/randal/Projects/hr_app/spec/models/contact_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/app/models/contact.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
       "/Users/randal/Projects/hr_app/spec/models/contact_type_spec.rb": [
         1,
         null,
@@ -601,13 +634,13 @@
         1,
         null,
         1,
-        29,
+        31,
         1,
         null,
         null,
         null,
         1,
-        29,
+        31,
         1,
         null,
         null,
@@ -637,6 +670,10 @@
         1,
         null,
         1,
+        null,
+        1,
+        1,
+        null,
         null,
         1,
         1,
@@ -752,6 +789,6 @@
         null
       ]
     },
-    "timestamp": 1519933242
+    "timestamp": 1519941950
   }
 }

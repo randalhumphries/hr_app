@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301193350) do
+ActiveRecord::Schema.define(version: 20180301220232) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -94,6 +94,16 @@ ActiveRecord::Schema.define(version: 20180301193350) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "contacts", force: :cascade do |t|
+    t.bigint "employee_id"
+    t.bigint "contact_type_id"
+    t.string "contact"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contact_type_id"], name: "index_contacts_on_contact_type_id"
+    t.index ["employee_id"], name: "index_contacts_on_employee_id"
+  end
+
   create_table "emergency_contacts", force: :cascade do |t|
     t.bigint "employee_id"
     t.bigint "relationship_type_id"
@@ -132,6 +142,7 @@ ActiveRecord::Schema.define(version: 20180301193350) do
     t.string "suffix"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "date_of_birth"
   end
 
   create_table "races", force: :cascade do |t|
@@ -176,6 +187,8 @@ ActiveRecord::Schema.define(version: 20180301193350) do
   add_foreign_key "certifications", "employees"
   add_foreign_key "certifications", "employees", column: "updated_by"
   add_foreign_key "company_units", "employees", column: "manager"
+  add_foreign_key "contacts", "contact_types"
+  add_foreign_key "contacts", "employees"
   add_foreign_key "emergency_contacts", "contact_types"
   add_foreign_key "emergency_contacts", "employees"
   add_foreign_key "emergency_contacts", "relationship_types"
