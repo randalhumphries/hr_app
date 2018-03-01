@@ -1,27 +1,30 @@
-env:
-  global:
-    - CC_TEST_REPORTER_ID=1ba40ee4508ab451516c65cdd01a181452c0e5b3a99354ac873f265ecfe6cbff
+global:
+  - CC_TEST_REPORTER_ID=1ba40ee4508ab451516c65cdd01a181452c0e5b3a99354ac873f265ecfe6cbff
 
-  language: ruby
-  rvm:
-    - 2.5.0
-  before_install:
-    - gem install bundler -v 1.16.1
-    - psql -c "CREATE DATABASE travis_ci_test;" -U postgres
+language:
+  - ruby
 
-  before_script:
-    - echo "Before Script Commands"
-    - cp config/database.yml.travis config/database.yml
-    - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-    - chmod +x ./cc-test-reporter
-    - ./cc-test-reporter before-build
+rvm:
+  - 2.5.0
 
-  services: postgresql
+before_install:
+  - gem install bundler -v 1.16.1
+  - psql -c "CREATE DATABASE travis_ci_test;" -U postgres
 
-  script:
-    - RAILS_ENV=test bundle exec rake db:migrate --trace
-    - bundle exec rake db:test:prepare
-    - bundle exec rake
+before_script:
+  - echo "Before Script Commands"
+  - cp config/database.yml.travis config/database.yml
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 
-  after_script:
-    - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+services:
+  - postgresql
+
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rake
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
