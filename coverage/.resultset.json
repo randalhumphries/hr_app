@@ -172,6 +172,17 @@
         null,
         null
       ],
+      "/Users/randal/Projects/hr_app/spec/factories/assignments.rb": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/randal/Projects/hr_app/spec/factories/benefit_types.rb": [
         1,
         1,
@@ -236,11 +247,23 @@
         null,
         null
       ],
+      "/Users/randal/Projects/hr_app/spec/factories/emergency_contacts.rb": [
+        1,
+        1,
+        1,
+        1,
+        4,
+        4,
+        1,
+        4,
+        null,
+        null
+      ],
       "/Users/randal/Projects/hr_app/spec/factories/employees.rb": [
         1,
         1,
         1,
-        17,
+        27,
         1,
         1,
         null,
@@ -256,11 +279,11 @@
       "/Users/randal/Projects/hr_app/spec/factories/people.rb": [
         1,
         1,
-        22,
-        23,
-        22,
-        23,
-        23,
+        32,
+        33,
+        32,
+        33,
+        33,
         null,
         null
       ],
@@ -311,12 +334,35 @@
         1,
         null
       ],
-      "/Users/randal/Projects/hr_app/app/models/assignment_type.rb": [
+      "/Users/randal/Projects/hr_app/app/models/assignment.rb": [
+        1,
+        1,
+        null,
         1,
         1,
         null
       ],
       "/Users/randal/Projects/hr_app/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/spec/models/assignment_type_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/app/models/assignment_type.rb": [
         1,
         1,
         null
@@ -487,6 +533,38 @@
         1,
         null
       ],
+      "/Users/randal/Projects/hr_app/spec/models/emergency_contact_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/app/models/emergency_contact.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/randal/Projects/hr_app/spec/models/employee_spec.rb": [
         1,
         null,
@@ -523,13 +601,13 @@
         1,
         null,
         1,
-        19,
+        29,
         1,
         null,
         null,
         null,
         1,
-        19,
+        29,
         1,
         null,
         null,
@@ -674,6 +752,6 @@
         null
       ]
     },
-    "timestamp": 1519929853
+    "timestamp": 1519933242
   }
 }

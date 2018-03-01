@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301184042) do
+ActiveRecord::Schema.define(version: 20180301193350) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,18 @@ ActiveRecord::Schema.define(version: 20180301184042) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "assignments", force: :cascade do |t|
+    t.bigint "assignment_type_id"
+    t.integer "employee"
+    t.date "assigned_at"
+    t.integer "assigned_by"
+    t.bigint "company_unit_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["assignment_type_id"], name: "index_assignments_on_assignment_type_id"
+    t.index ["company_unit_id"], name: "index_assignments_on_company_unit_id"
   end
 
   create_table "benefit_types", force: :cascade do |t|
@@ -82,6 +94,20 @@ ActiveRecord::Schema.define(version: 20180301184042) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "emergency_contacts", force: :cascade do |t|
+    t.bigint "employee_id"
+    t.bigint "relationship_type_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.bigint "contact_type_id"
+    t.string "contact"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contact_type_id"], name: "index_emergency_contacts_on_contact_type_id"
+    t.index ["employee_id"], name: "index_emergency_contacts_on_employee_id"
+    t.index ["relationship_type_id"], name: "index_emergency_contacts_on_relationship_type_id"
+  end
+
   create_table "employees", force: :cascade do |t|
     t.boolean "active", default: true
     t.date "temp_hire_at"
@@ -140,6 +166,9 @@ ActiveRecord::Schema.define(version: 20180301184042) do
     t.index ["remuneration_type_id"], name: "index_remunerations_on_remuneration_type_id"
   end
 
+  add_foreign_key "assignments", "assignment_types"
+  add_foreign_key "assignments", "company_units"
+  add_foreign_key "assignments", "employees", column: "assigned_by"
   add_foreign_key "benefits", "benefit_types"
   add_foreign_key "benefits", "employees"
   add_foreign_key "benefits", "employees", column: "updated_by"
@@ -147,6 +176,9 @@ ActiveRecord::Schema.define(version: 20180301184042) do
   add_foreign_key "certifications", "employees"
   add_foreign_key "certifications", "employees", column: "updated_by"
   add_foreign_key "company_units", "employees", column: "manager"
+  add_foreign_key "emergency_contacts", "contact_types"
+  add_foreign_key "emergency_contacts", "employees"
+  add_foreign_key "emergency_contacts", "relationship_types"
   add_foreign_key "employees", "people"
   add_foreign_key "remunerations", "employees"
   add_foreign_key "remunerations", "employees", column: "updated_by"
