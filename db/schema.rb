@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180228162541) do
+ActiveRecord::Schema.define(version: 20180301173958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,19 @@ ActiveRecord::Schema.define(version: 20180228162541) do
     t.string "eligibility_interval_unit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "benefits", force: :cascade do |t|
+    t.bigint "employee_id"
+    t.bigint "benefit_type_id"
+    t.date "eligible_at"
+    t.date "notified_at"
+    t.integer "updated_by"
+    t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["benefit_type_id"], name: "index_benefits_on_benefit_type_id"
+    t.index ["employee_id"], name: "index_benefits_on_employee_id"
   end
 
   create_table "certification_types", force: :cascade do |t|
@@ -96,6 +109,9 @@ ActiveRecord::Schema.define(version: 20180228162541) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "benefits", "benefit_types"
+  add_foreign_key "benefits", "employees"
+  add_foreign_key "benefits", "employees", column: "updated_by"
   add_foreign_key "company_units", "employees", column: "manager"
   add_foreign_key "employees", "people"
 end
