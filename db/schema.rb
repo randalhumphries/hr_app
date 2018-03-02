@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180301230912) do
+ActiveRecord::Schema.define(version: 20180301234635) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
+    t.bigint "person_id"
+    t.string "address_1"
+    t.string "address_2"
+    t.string "city"
+    t.string "state"
+    t.integer "zip"
+    t.string "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["person_id"], name: "index_addresses_on_person_id"
+  end
 
   create_table "assignment_types", force: :cascade do |t|
     t.string "name"
@@ -192,6 +205,7 @@ ActiveRecord::Schema.define(version: 20180301230912) do
     t.index ["remuneration_type_id"], name: "index_remunerations_on_remuneration_type_id"
   end
 
+  add_foreign_key "addresses", "people"
   add_foreign_key "assignments", "assignment_types"
   add_foreign_key "assignments", "company_units"
   add_foreign_key "assignments", "employees", column: "assigned_by"

@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-01T18:11:47-05:00">2018-03-01T18:11:47-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-01T19:05:19-05:00">2018-03-01T19:05:19-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.05
+         2.18
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>72</b> files in total.
-    <b>333</b> relevant lines. 
-    <span class="green"><b>333</b> lines covered</span> and
+    <b>75</b> files in total.
+    <b>356</b> relevant lines. 
+    <span class="green"><b>356</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -58,6 +58,16 @@
         <td>1</td>
         <td>0</td>
         <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#cd7a2f7284f72a13a197aa23d3739e88c304db9e" class="src_link" title="app/models/address.rb">app/models/address.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>14</td>
+        <td>8</td>
+        <td>8</td>
+        <td>0</td>
+        <td>1.6</td>
       </tr>
       
       <tr>
@@ -391,6 +401,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#8b4090c6b3a005ab60ba7da1d6bd51494ab3d596" class="src_link" title="spec/factories/addresses.rb">spec/factories/addresses.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>11</td>
+        <td>9</td>
+        <td>9</td>
+        <td>0</td>
+        <td>4.2</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#ac3f82e5bd430f87f95b4dc8bf40f7ec9c1ae8d0" class="src_link" title="spec/factories/assignment_types.rb">spec/factories/assignment_types.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>5</td>
@@ -537,7 +557,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>29.1</td>
+        <td>33.6</td>
       </tr>
       
       <tr>
@@ -578,6 +598,16 @@
         <td>6</td>
         <td>0</td>
         <td>1.7</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#822f3fa186a0d90dcb289ebcf1c25090292c95fd" class="src_link" title="spec/models/assignment_spec.rb">spec/models/assignment_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>13</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -807,6 +837,109 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="cd7a2f7284f72a13a197aa23d3739e88c304db9e">
+  <div class="header">
+    <h3>app/models/address.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Address &lt; ApplicationRecord</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates :address_1, :city, :zip, presence: true</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validate :state_present?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :person</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def state_present?</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="10">
+          <span class="hits">6</span>
+          
+          <code class="ruby">      if state.nil? &amp;&amp; country == &#39;US&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        errors.add(:state, &quot;can&#39;t be blank&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>
@@ -2908,6 +3041,91 @@
 </div>
 
       
+        <div class="source_table" id="8b4090c6b3a005ab60ba7da1d6bd51494ab3d596">
+  <div class="header">
+    <h3>spec/factories/addresses.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>9</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">FactoryBot.define do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  factory :address do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    person</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="4">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    address_1 { Faker::Address.street_address }</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="5">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    address_2 { Faker::Address.secondary_address }</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="6">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    city      { Faker::Address.city }</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="7">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    state     { Faker::Address.state_abbr }</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="8">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    zip       { Faker::Address.zip }</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="9">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    country   { Faker::Address.country_code }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="ac3f82e5bd430f87f95b4dc8bf40f7ec9c1ae8d0">
   <div class="header">
     <h3>spec/factories/assignment_types.rb</h3>
@@ -3818,38 +4036,38 @@
           <code class="ruby">  factory :person do</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="3">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="44" data-linenumber="3">
+          <span class="hits">44</span>
           
           <code class="ruby">    first_name    { Faker::Name.first_name }</code>
         </li>
       
-        <li class="covered" data-hits="39" data-linenumber="4">
-          <span class="hits">39</span>
+        <li class="covered" data-hits="45" data-linenumber="4">
+          <span class="hits">45</span>
           
           <code class="ruby">    middle_name   { Faker::Name.first_name }</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="5">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="44" data-linenumber="5">
+          <span class="hits">44</span>
           
           <code class="ruby">    last_name     { Faker::Name.last_name }</code>
         </li>
       
-        <li class="covered" data-hits="39" data-linenumber="6">
-          <span class="hits">39</span>
+        <li class="covered" data-hits="45" data-linenumber="6">
+          <span class="hits">45</span>
           
           <code class="ruby">    prefix        { Faker::Name.prefix }</code>
         </li>
       
-        <li class="covered" data-hits="39" data-linenumber="7">
-          <span class="hits">39</span>
+        <li class="covered" data-hits="45" data-linenumber="7">
+          <span class="hits">45</span>
           
           <code class="ruby">    suffix        { Faker::Name.suffix }</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="8">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="44" data-linenumber="8">
+          <span class="hits">44</span>
           
           <code class="ruby">    date_of_birth { Faker::Date.birthday(18, 65) }</code>
         </li>
@@ -4087,6 +4305,103 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="822f3fa186a0d90dcb289ebcf1c25090292c95fd">
+  <div class="header">
+    <h3>spec/models/assignment_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe Assignment, type: :model do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;is valid with valid attributes&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(build(:assignment)).to be_valid</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;is not valid without a assigned at date&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(build(:assignment, assigned_at: nil)).not_to be_valid</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">end</code>
