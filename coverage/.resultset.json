@@ -284,7 +284,6 @@
         1,
         1,
         1,
-        1,
         5,
         5,
         1,
@@ -296,7 +295,7 @@
         1,
         1,
         1,
-        32,
+        23,
         1,
         1,
         null,
@@ -312,12 +311,12 @@
       "/Users/randal/Projects/hr_app/spec/factories/people.rb": [
         1,
         1,
-        44,
-        45,
-        44,
-        45,
-        45,
-        44,
+        39,
+        40,
+        39,
+        40,
+        40,
+        39,
         null,
         null
       ],
@@ -670,7 +669,6 @@
         null,
         1,
         1,
-        1,
         null
       ],
       "/Users/randal/Projects/hr_app/spec/models/employee_spec.rb": [
@@ -709,13 +707,13 @@
         1,
         null,
         1,
-        34,
+        25,
         1,
         null,
         null,
         null,
         1,
-        34,
+        25,
         1,
         null,
         null,
@@ -864,6 +862,6 @@
         null
       ]
     },
-    "timestamp": 1519949119
+    "timestamp": 1519958862
   }
 }

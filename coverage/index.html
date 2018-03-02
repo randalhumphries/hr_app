@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-01T19:05:19-05:00">2018-03-01T19:05:19-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-01T21:47:42-05:00">2018-03-01T21:47:42-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.18
+         2.02
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>75</b> files in total.
-    <b>356</b> relevant lines. 
-    <span class="green"><b>356</b> lines covered</span> and
+    <b>354</b> relevant lines. 
+    <span class="green"><b>354</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -193,9 +193,9 @@
       <tr>
         <td class="strong"><a href="#f0da2759e9f5eda30f9339fc3a3f38b1b05da2a5" class="src_link" title="app/models/emergency_contact.rb">app/models/emergency_contact.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
-        <td>5</td>
-        <td>5</td>
+        <td>6</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -207,7 +207,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>6.5</td>
+        <td>5.0</td>
       </tr>
       
       <tr>
@@ -523,11 +523,11 @@
       <tr>
         <td class="strong"><a href="#3f31762e686fff7328a669eebbe040e670a570af" class="src_link" title="spec/factories/emergency_contacts.rb">spec/factories/emergency_contacts.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>10</td>
-        <td>8</td>
-        <td>8</td>
+        <td>9</td>
+        <td>7</td>
+        <td>7</td>
         <td>0</td>
-        <td>2.5</td>
+        <td>2.7</td>
       </tr>
       
       <tr>
@@ -537,7 +537,7 @@
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>6.2</td>
+        <td>4.7</td>
       </tr>
       
       <tr>
@@ -557,7 +557,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>33.6</td>
+        <td>29.9</td>
       </tr>
       
       <tr>
@@ -1372,7 +1372,7 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  belongs_to :employee</code>
+          <code class="ruby">  belongs_to :person</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
@@ -1452,7 +1452,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  belongs_to :employee</code>
+          <code class="ruby">  belongs_to :person</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
@@ -1495,8 +1495,8 @@
     <h3>app/models/emergency_contact.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1525,22 +1525,16 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  belongs_to :employee</code>
+          <code class="ruby">  belongs_to :relationship_type</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">  belongs_to :relationship_type</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
-          
           <code class="ruby">  belongs_to :contact_type</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby">end</code>
@@ -1631,8 +1625,8 @@
           <code class="ruby">    def hire_date_valid?</code>
         </li>
       
-        <li class="covered" data-hits="34" data-linenumber="12">
-          <span class="hits">34</span>
+        <li class="covered" data-hits="25" data-linenumber="12">
+          <span class="hits">25</span>
           
           <code class="ruby">      if temp_hire_at.present? &amp;&amp; temp_hire_at &gt; Date.today</code>
         </li>
@@ -1667,8 +1661,8 @@
           <code class="ruby">    def create_temp_hire_date</code>
         </li>
       
-        <li class="covered" data-hits="34" data-linenumber="18">
-          <span class="hits">34</span>
+        <li class="covered" data-hits="25" data-linenumber="18">
+          <span class="hits">25</span>
           
           <code class="ruby">      if full_time_hire_at.present? &amp;&amp; temp_hire_at.present? == false</code>
         </li>
@@ -3710,7 +3704,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">    employee</code>
+          <code class="ruby">    person</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
@@ -3771,7 +3765,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">    employee</code>
+          <code class="ruby">    person</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
@@ -3820,8 +3814,8 @@
     <h3>spec/factories/emergency_contacts.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3844,46 +3838,40 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">    employee</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
-          
           <code class="ruby">    relationship_type</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="5">
+        <li class="covered" data-hits="5" data-linenumber="4">
           <span class="hits">5</span>
           
           <code class="ruby">    first_name    { Faker::Name.first_name }</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="6">
+        <li class="covered" data-hits="5" data-linenumber="5">
           <span class="hits">5</span>
           
           <code class="ruby">    last_name     { Faker::Name.last_name }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
+        <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
           <code class="ruby">    contact_type</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="8">
+        <li class="covered" data-hits="5" data-linenumber="7">
           <span class="hits">5</span>
           
           <code class="ruby">    contact       { Faker::Internet.email }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">end</code>
@@ -3926,8 +3914,8 @@
           <code class="ruby">    active            true</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="4">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="23" data-linenumber="4">
+          <span class="hits">23</span>
           
           <code class="ruby">    temp_hire_at      { Date.today }</code>
         </li>
@@ -4036,38 +4024,38 @@
           <code class="ruby">  factory :person do</code>
         </li>
       
-        <li class="covered" data-hits="44" data-linenumber="3">
-          <span class="hits">44</span>
+        <li class="covered" data-hits="39" data-linenumber="3">
+          <span class="hits">39</span>
           
           <code class="ruby">    first_name    { Faker::Name.first_name }</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="4">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="40" data-linenumber="4">
+          <span class="hits">40</span>
           
           <code class="ruby">    middle_name   { Faker::Name.first_name }</code>
         </li>
       
-        <li class="covered" data-hits="44" data-linenumber="5">
-          <span class="hits">44</span>
+        <li class="covered" data-hits="39" data-linenumber="5">
+          <span class="hits">39</span>
           
           <code class="ruby">    last_name     { Faker::Name.last_name }</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="6">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="40" data-linenumber="6">
+          <span class="hits">40</span>
           
           <code class="ruby">    prefix        { Faker::Name.prefix }</code>
         </li>
       
-        <li class="covered" data-hits="45" data-linenumber="7">
-          <span class="hits">45</span>
+        <li class="covered" data-hits="40" data-linenumber="7">
+          <span class="hits">40</span>
           
           <code class="ruby">    suffix        { Faker::Name.suffix }</code>
         </li>
       
-        <li class="covered" data-hits="44" data-linenumber="8">
-          <span class="hits">44</span>
+        <li class="covered" data-hits="39" data-linenumber="8">
+          <span class="hits">39</span>
           
           <code class="ruby">    date_of_birth { Faker::Date.birthday(18, 65) }</code>
         </li>
