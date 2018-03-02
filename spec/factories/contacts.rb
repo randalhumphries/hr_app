@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :contact do
-    employee
+    person
     contact_type
     contact       "MyString"
   end

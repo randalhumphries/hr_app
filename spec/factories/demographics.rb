@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :demographic do
-    employee
+    person
     race
     ethnicity
     contact

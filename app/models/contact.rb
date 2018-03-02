@@ -1,6 +1,6 @@
 class Contact < ApplicationRecord
   validates :contact, presence: true
   
-  belongs_to :employee
+  belongs_to :person
   belongs_to :contact_type
 end
