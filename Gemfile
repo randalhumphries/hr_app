@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 # Use Devise for user authentication
 gem 'devise'
+# Use Doorkeeper for OAuth authentication
+gem 'doorkeeper'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
