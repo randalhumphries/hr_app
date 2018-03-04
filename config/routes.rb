@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       namespace :admin do
         resources :users, except: [ :new, :edit ]
+        resources :races, except: [ :new, :edit ]
       end
     end
 
