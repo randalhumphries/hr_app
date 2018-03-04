@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-04T12:21:17-05:00">2018-03-04T12:21:17-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-04T12:49:26-05:00">2018-03-04T12:49:26-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -1276,7 +1276,7 @@
         <li class="covered" data-hits="2" data-linenumber="6">
           <span class="hits">2</span>
           
-          <code class="ruby">    @users = User.all</code>
+          <code class="ruby">    @users = User.all.sort</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
@@ -10896,7 +10896,7 @@
         <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
-          <code class="ruby">      @users &lt;&lt; login_user</code>
+          <code class="ruby">      (@users &lt;&lt; login_user).sort!</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">

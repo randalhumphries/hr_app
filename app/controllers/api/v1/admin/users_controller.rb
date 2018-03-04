@@ -3,7 +3,7 @@ class Api::V1::Admin::UsersController < Api::V1Controller
   before_action :find_user, except: [ :index, :create ]
 
   def index
-    @users = User.all
+    @users = User.all.sort
 
     render :index
   end

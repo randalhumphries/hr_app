@@ -25,7 +25,7 @@ RSpec.describe Api::V1::Admin::UsersController, type: :request do
     it 'returns the list of current users' do
 
       @users = create_list(:user, 10)
-      @users << login_user
+      (@users << login_user).sort!
 
       get "/api/v1/admin/users", headers: @headers
       expect(response).to have_http_status(200)
