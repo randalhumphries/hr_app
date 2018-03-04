@@ -6,6 +6,13 @@ Rails.application.routes.draw do
     get "/v1/not_found" => 'v1#test_not_found'
     get "/v1/not_authorized" => 'v1#test_not_authorized'
     get "/v1/application_error" => 'v1#test_application_error'
+
+    namespace :v1 do
+      namespace :admin do
+        resources :users, except: [ :new, :edit ]
+      end
+    end
+
   end
 
   use_doorkeeper
