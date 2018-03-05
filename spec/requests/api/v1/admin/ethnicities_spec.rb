@@ -182,7 +182,7 @@ RSpec.describe Api::V1::Admin::EthnicitiesController, type: :request do
 
   end
 
-  describe "Race API Destroy" do
+  describe "Benefit API Destroy" do
 
     it "returns http not authorized when not signed in" do
       sign_out login_user
@@ -200,7 +200,7 @@ RSpec.describe Api::V1::Admin::EthnicitiesController, type: :request do
       expect(response).to have_http_status(200)
       u = JSON.parse(response.body).deep_symbolize_keys
       expect(u[:success]).to eq(true)
-      expect(u[:ethnicities].any? { |ethnicity| ethnicity }).to eq(false)
+      expect(u[:ethnicities].any? { |value| ethnicity }).to eq(false)
     end
 
   end
