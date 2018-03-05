@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-04T19:03:53-05:00">2018-03-04T19:03:53-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-04T20:10:25-05:00">2018-03-04T20:10:25-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">97.6%</span></span>
+    (<span class="covered_percent"><span class="green">97.58%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.12
+         2.18
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>94</b> files in total.
-    <b>957</b> relevant lines. 
-    <span class="green"><b>934</b> lines covered</span> and
-    <span class="red"><b>23</b> lines missed </span>
+    <b>96</b> files in total.
+    <b>1155</b> relevant lines. 
+    <span class="green"><b>1127</b> lines covered</span> and
+    <span class="red"><b>28</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -58,6 +58,16 @@
         <td>10</td>
         <td>9</td>
         <td>0.5</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#fbcb5b6bf39b2e48f93b0f3ca2ae6a085bcfd80a" class="src_link" title="app/controllers/api/v1/admin/benefit_types_controller.rb">app/controllers/api/v1/admin/benefit_types_controller.rb</a></td>
+        <td class="green strong">96.15 %</td>
+        <td>53</td>
+        <td>26</td>
+        <td>25</td>
+        <td>1</td>
+        <td>2.8</td>
       </tr>
       
       <tr>
@@ -97,7 +107,7 @@
         <td>34</td>
         <td>30</td>
         <td>4</td>
-        <td>3.4</td>
+        <td>5.0</td>
       </tr>
       
       <tr>
@@ -193,9 +203,9 @@
       <tr>
         <td class="strong"><a href="#ba3ad896ef4f4560d5d4d2400584ed5ab62c8711" class="src_link" title="app/models/benefit_type.rb">app/models/benefit_type.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>4</td>
         <td>3</td>
-        <td>2</td>
-        <td>2</td>
+        <td>3</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -503,9 +513,9 @@
       <tr>
         <td class="strong"><a href="#66950fccb3aa6c79ff023322f321e77e7495df23" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>22</td>
-        <td>14</td>
-        <td>14</td>
+        <td>23</td>
+        <td>15</td>
+        <td>15</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -717,7 +727,7 @@
         <td>14</td>
         <td>14</td>
         <td>0</td>
-        <td>5.8</td>
+        <td>7.4</td>
       </tr>
       
       <tr>
@@ -931,6 +941,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#96d241416234b25d1ff9281e1751107047ac756a" class="src_link" title="spec/requests/api/v1/admin/benefit_types_spec.rb">spec/requests/api/v1/admin/benefit_types_spec.rb</a></td>
+        <td class="green strong">97.65 %</td>
+        <td>256</td>
+        <td>170</td>
+        <td>166</td>
+        <td>4</td>
+        <td>1.4</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#3ed600ffa61c61a9206b07f171199570714b8cf0" class="src_link" title="spec/requests/api/v1/admin/ethnicities_spec.rb">spec/requests/api/v1/admin/ethnicities_spec.rb</a></td>
         <td class="green strong">98.51 %</td>
         <td>208</td>
@@ -987,7 +1007,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>22.8</td>
+        <td>31.4</td>
       </tr>
       
     </tbody>
@@ -1249,6 +1269,343 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="fbcb5b6bf39b2e48f93b0f3ca2ae6a085bcfd80a">
+  <div class="header">
+    <h3>app/controllers/api/v1/admin/benefit_types_controller.rb</h3>
+    <h4><span class="green">96.15 %</span> covered</h4>
+    <div>
+      <b>26</b> relevant lines. 
+      <span class="green"><b>25</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Api::V1::Admin::BenefitTypesController &lt; Api::V1Controller</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  before_action :find_benefit_type, except: [ :index, :create ]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def index</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @benefit_types = BenefitType.all.sort</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    render :index</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def show</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    render :show</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def update</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="16">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    if @benefit_type.update(benefit_type_params)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="17">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      render :show</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="19">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      render_response(success: false, errors: @benefit_type.errors, status: 200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def create</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="24">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    @benefit_type = BenefitType.new(benefit_type_params)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="26">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    if @benefit_type.save</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="27">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      render :show</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="29">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      render_response(success: false, errors: @benefit_type.errors, status: 200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def destroy</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="34">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    if @benefit_type.destroy</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="35">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      @benefit_types = BenefitType.all.sort</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="37">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      render :index</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="39">
+          
+          
+          <code class="ruby">      render_response(success: false, errors: @benefit_type.errors, status: 200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="45">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def benefit_type_params</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="46">
+          <span class="hits">12</span>
+          
+          <code class="ruby">      params.permit(:name, :eligibility_interval, :eligibility_interval_unit)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def find_benefit_type</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="50">
+          <span class="hits">10</span>
+          
+          <code class="ruby">      @benefit_type = BenefitType.find(params[:id])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
           
           
           <code class="ruby">end</code>
@@ -2488,44 +2845,44 @@
           <code class="ruby">  def render_response(opts={})</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="46">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="21" data-linenumber="46">
+          <span class="hits">21</span>
           
           <code class="ruby">    @success = opts.fetch(:success, true)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="47">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="21" data-linenumber="47">
+          <span class="hits">21</span>
           
           <code class="ruby">    @errors = opts.fetch(:errors, nil)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="48">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="21" data-linenumber="48">
+          <span class="hits">21</span>
           
           <code class="ruby">    @message = opts.fetch(:message, nil)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="49">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="21" data-linenumber="49">
+          <span class="hits">21</span>
           
           <code class="ruby">    @ids = opts.fetch(:ids, nil)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="50">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="21" data-linenumber="50">
+          <span class="hits">21</span>
           
           <code class="ruby">    @code = opts.fetch(:code, 200)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="51">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="21" data-linenumber="51">
+          <span class="hits">21</span>
           
           <code class="ruby">    @code = 200 if @success == true</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="52">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="21" data-linenumber="52">
+          <span class="hits">21</span>
           
           <code class="ruby">    render &quot;/api/v1/shared/generic_response&quot;, status: @code</code>
         </li>
@@ -3005,8 +3362,8 @@
     <h3>app/models/benefit_type.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3026,7 +3383,13 @@
           <code class="ruby">  validates :name, :eligibility_interval, :eligibility_interval_unit, presence: true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates :name, uniqueness: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby">end</code>
@@ -7428,8 +7791,8 @@
     <h3>config/routes.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>14</b> relevant lines. 
-      <span class="green"><b>14</b> lines covered</span> and
+      <b>15</b> relevant lines. 
+      <span class="green"><b>15</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -7521,49 +7884,55 @@
           <code class="ruby">        resources :ethnicities, except: [ :new, :edit ]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">        resources :benefit_types, except: [ :new, :edit ]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="20">
           
-          <code class="ruby">  use_doorkeeper</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
+          <code class="ruby">  use_doorkeeper</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
           <code class="ruby">  devise_for :users</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">end</code>
@@ -8880,8 +9249,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="68" data-linenumber="5">
-          <span class="hits">68</span>
+        <li class="covered" data-hits="91" data-linenumber="5">
+          <span class="hits">91</span>
           
           <code class="ruby">    email                 { Faker::Internet.unique.email }</code>
         </li>
@@ -11396,6 +11765,1561 @@
 </div>
 
       
+        <div class="source_table" id="96d241416234b25d1ff9281e1751107047ac756a">
+  <div class="header">
+    <h3>spec/requests/api/v1/admin/benefit_types_spec.rb</h3>
+    <h4><span class="green">97.65 %</span> covered</h4>
+    <div>
+      <b>170</b> relevant lines. 
+      <span class="green"><b>166</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe Api::V1::Admin::BenefitTypesController, type: :request do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="24" data-linenumber="5">
+          <span class="hits">24</span>
+          
+          <code class="ruby">  let(:login_user) { create(:user, :admin) }</code>
+        </li>
+      
+        <li class="covered" data-hits="14" data-linenumber="6">
+          <span class="hits">14</span>
+          
+          <code class="ruby">  let(:benefit_type)       { create(:benefit_type) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  before(:each) do</code>
+        </li>
+      
+        <li class="covered" data-hits="23" data-linenumber="9">
+          <span class="hits">23</span>
+          
+          <code class="ruby">    @headers = { &#39;ACCEPT&#39;: &#39;application/json&#39;,  &#39;CONTENT-TYPE&#39;: &#39;application/json&#39; }</code>
+        </li>
+      
+        <li class="covered" data-hits="23" data-linenumber="10">
+          <span class="hits">23</span>
+          
+          <code class="ruby">    sign_in login_user</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;Benefit Types API Index &quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;returns http not authorized when not signed in&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      sign_out login_user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get &quot;/api/v1/admin/benefit_types&quot;, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(401)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http success when signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get &quot;/api/v1/admin/benefit_types&quot;, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns the list of benefit types&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @benefit_types = []</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @benefit_types &lt;&lt; build(:benefit_type, name: &quot;HEALTHCARE&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @benefit_types &lt;&lt; build(:benefit_type, name: &quot;VISION&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @benefit_types.sort!</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get &quot;/api/v1/admin/benefit_types&quot;, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(true)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u[:benefit_types].each_with_index do |benefit_type, index|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="37">
+          
+          
+          <code class="ruby">        expect(benefit_type[:id]).to eq(@benefit_types[index].id)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="38">
+          
+          
+          <code class="ruby">        expect(benefit_type[:name]).to eq(@benefit_types[index].name)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="39">
+          
+          
+          <code class="ruby">        expect(benefit_type[:eligibility_interval]).to eq(@benefit_types[index].eligibility_interval)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="40">
+          
+          
+          <code class="ruby">        expect(benefit_type[:eligibility_interval_unit]).to eq(@benefit_types[index].eligibility_interval_unit)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;Benefit Types API Show&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http not authorized when not signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = { name: &quot;HEALTHCARE&quot;, eligibility_interval: 6, eligibility_interval_unit: &quot;months&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      sign_out login_user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get &quot;/api/v1/admin/benefit_types/#{benefit_type.id}&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(401)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http success when signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = { name: &quot;HEALTHCARE&quot;, eligibility_interval: 6, eligibility_interval_unit: &quot;months&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get &quot;/api/v1/admin/benefit_types/#{benefit_type.id}&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="65">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns the details of the specified benefit type&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = { name: &quot;HEALTHCARE&quot;, eligibility_interval: 6, eligibility_interval_unit: &quot;months&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="69">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get &quot;/api/v1/admin/benefit_types/#{benefit_type.id}&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="70">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="72">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(true)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:benefit_type][:id]).to eq(benefit_type.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:benefit_type][:name]).to eq(benefit_type.name)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:benefit_type][:eligibility_interval]).to eq(benefit_type.eligibility_interval)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="76">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:benefit_type][:eligibility_interval_unit]).to eq(benefit_type.eligibility_interval_unit)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="81">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;Benefit Types API Create&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="83">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http not authorized when not signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="84">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = { name: &quot;HEALTHCARE&quot;, eligibility_interval: 6, eligibility_interval_unit: &quot;months&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="85">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      sign_out login_user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="88">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      post &quot;/api/v1/admin/benefit_types&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="89">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(401)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="92">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http success when signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="93">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = { name: &quot;HEALTHCARE&quot;, eligibility_interval: 6, eligibility_interval_unit: &quot;months&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="94">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="95">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="96">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      post &quot;/api/v1/admin/benefit_types/&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="97">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="98">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="99">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="100">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is successful with valid parameters&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="101">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = { name: &quot;HEALTHCARE&quot;, eligibility_interval: 6, eligibility_interval_unit: &quot;months&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="102">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="103">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="104">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      post &quot;/api/v1/admin/benefit_types&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="105">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="106">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="107">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(true)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="108">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:benefit_type][:name]).to eq(benefit_type_params[:name])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="109">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="110">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="111">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is not successful without a name&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="112">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = { name: nil, eligibility_interval: 6, eligibility_interval_unit: &quot;months&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="113">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="114">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="115">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      post &quot;/api/v1/admin/benefit_types&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="116">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="117">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="118">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(false)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="119">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:errors][:name]).to eq([&quot;can&#39;t be blank&quot;])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="120">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="121">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="122">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is not successful with a dupliate name&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="123">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = create(:benefit_type, name: &quot;HEALTHCARE&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="124">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="125">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="126">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      post &quot;/api/v1/admin/benefit_types&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="127">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="128">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="129">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(false)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="130">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:errors][:name]).to eq([&quot;has already been taken&quot;])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="131">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="132">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="133">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is not successful without an eligibility interval&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="134">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = { name: &quot;HEALTHCARE&quot;, eligibility_interval: nil, eligibility_interval_unit: &quot;months&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="135">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="136">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="137">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      post &quot;/api/v1/admin/benefit_types&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="138">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="139">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="140">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(false)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="141">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:errors][:eligibility_interval]).to eq([&quot;can&#39;t be blank&quot;])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="142">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="143">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="144">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is not successful without an eligibility interval unit&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="145">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = { name: &quot;HEALTHCARE&quot;, eligibility_interval: 6, eligibility_interval_unit: nil }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="146">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="147">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="148">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      post &quot;/api/v1/admin/benefit_types&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="149">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="150">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="151">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(false)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="152">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:errors][:eligibility_interval_unit]).to eq([&quot;can&#39;t be blank&quot;])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="153">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="154">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="155">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="156">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="157">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;Benefit Types API Update&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="158">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="159">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http not authorized when not signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="160">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = { name: &quot;HEALTHCARE&quot;, eligibility_interval: 6, eligibility_interval_unit: &quot;months&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="161">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="162">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="163">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      sign_out login_user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="164">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      patch &quot;/api/v1/admin/benefit_types/#{benefit_type.id}&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="165">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(401)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="166">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="167">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="168">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http success when signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="169">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = { name: &quot;HEALTHCARE&quot;, eligibility_interval: 6, eligibility_interval_unit: &quot;months&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="170">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="171">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="172">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      patch &quot;/api/v1/admin/benefit_types/#{benefit_type.id}&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="173">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="174">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="175">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="176">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is successful with valid parameters&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="177">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = { name: &quot;HEALTHCARE&quot;, eligibility_interval: 6, eligibility_interval_unit: &quot;months&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="178">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="179">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="180">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      patch &quot;/api/v1/admin/benefit_types/#{benefit_type.id}&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="181">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="182">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="183">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(true)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="184">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:benefit_type][:name]).to eq(benefit_type_params[:name])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="185">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="186">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="187">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is not successful without a name&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="188">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = { name: nil, eligibility_interval: 6, eligibility_interval_unit: &quot;months&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="189">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="190">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="191">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      patch &quot;/api/v1/admin/benefit_types/#{benefit_type.id}&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="192">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="193">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="194">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(false)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="195">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:errors][:name]).to eq([&quot;can&#39;t be blank&quot;])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="196">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="197">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="198">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is not successful with a duplicate name&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="199">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = create(:benefit_type, name: &quot;HEALTHCARE&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="200">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="201">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="202">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      patch &quot;/api/v1/admin/benefit_types/#{benefit_type.id}&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="203">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="204">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="205">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(false)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="206">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:errors][:name]).to eq([&quot;has already been taken&quot;])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="207">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="208">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="209">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is not successful without an eligibility interval&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="210">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = { name: &quot;HEALTHCARE&quot;, eligibility_interval: nil, eligibility_interval_unit: &quot;months&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="211">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="212">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="213">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      patch &quot;/api/v1/admin/benefit_types/#{benefit_type.id}&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="214">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="215">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="216">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(false)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="217">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:errors][:eligibility_interval]).to eq([&quot;can&#39;t be blank&quot;])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="218">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="219">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="220">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is not successful without an eligibility interval unit&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="221">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params      = { name: &quot;HEALTHCARE&quot;, eligibility_interval: 6, eligibility_interval_unit: nil }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="222">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      benefit_type_params_json = benefit_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="223">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="224">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      patch &quot;/api/v1/admin/benefit_types/#{benefit_type.id}&quot;, params: benefit_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="225">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="226">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="227">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(false)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="228">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:errors][:eligibility_interval_unit]).to eq([&quot;can&#39;t be blank&quot;])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="229">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="230">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="231">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="232">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="233">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;Benefit Types API Destroy&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="234">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="235">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http not authorized when not signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="236">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      sign_out login_user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="237">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      delete &quot;/api/v1/admin/benefit_types/#{benefit_type.id}&quot;, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="238">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(401)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="239">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="240">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="241">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http success when signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="242">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      delete &quot;/api/v1/admin/benefit_types/#{benefit_type.id}&quot;, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="243">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="244">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="245">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="246">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns the list of benefit types without the deleted benefit type&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="247">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      delete &quot;/api/v1/admin/benefit_types/#{benefit_type.id}&quot;, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="248">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="249">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="250">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(true)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="251">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:benefit_types].any? { |value| benefit_type }).to eq(false)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="252">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="253">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="254">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="255">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="256">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="3ed600ffa61c61a9206b07f171199570714b8cf0">
   <div class="header">
     <h3>spec/requests/api/v1/admin/ethnicities_spec.rb</h3>
@@ -12517,7 +14441,7 @@
         <li class="covered" data-hits="1" data-linenumber="185">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &quot;Race API Destroy&quot; do</code>
+          <code class="ruby">  describe &quot;Ethnicities API Destroy&quot; do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="186">
@@ -12625,7 +14549,7 @@
         <li class="covered" data-hits="1" data-linenumber="203">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(u[:ethnicities].any? { |ethnicity| ethnicity }).to eq(false)</code>
+          <code class="ruby">      expect(u[:ethnicities].any? { |value| ethnicity }).to eq(false)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="204">
@@ -15243,14 +17167,14 @@
           <code class="ruby">  def self.included(base)</code>
         </li>
       
-        <li class="covered" data-hits="62" data-linenumber="6">
-          <span class="hits">62</span>
+        <li class="covered" data-hits="86" data-linenumber="6">
+          <span class="hits">86</span>
           
           <code class="ruby">    base.before(:each) { Warden.test_mode! }</code>
         </li>
       
-        <li class="covered" data-hits="62" data-linenumber="7">
-          <span class="hits">62</span>
+        <li class="covered" data-hits="86" data-linenumber="7">
+          <span class="hits">86</span>
           
           <code class="ruby">    base.after(:each) { Warden.test_reset! }</code>
         </li>
@@ -15273,8 +17197,8 @@
           <code class="ruby">  def sign_in(resource)</code>
         </li>
       
-        <li class="covered" data-hits="56" data-linenumber="11">
-          <span class="hits">56</span>
+        <li class="covered" data-hits="79" data-linenumber="11">
+          <span class="hits">79</span>
           
           <code class="ruby">    login_as(resource, scope: warden_scope(resource))</code>
         </li>
@@ -15297,8 +17221,8 @@
           <code class="ruby">  def sign_out(resource)</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="15">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="20" data-linenumber="15">
+          <span class="hits">20</span>
           
           <code class="ruby">    logout(warden_scope(resource))</code>
         </li>
@@ -15333,8 +17257,8 @@
           <code class="ruby">  def warden_scope(resource)</code>
         </li>
       
-        <li class="covered" data-hits="71" data-linenumber="21">
-          <span class="hits">71</span>
+        <li class="covered" data-hits="99" data-linenumber="21">
+          <span class="hits">99</span>
           
           <code class="ruby">    resource.class.name.underscore.to_sym</code>
         </li>
