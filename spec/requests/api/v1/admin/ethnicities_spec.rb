@@ -182,7 +182,7 @@ RSpec.describe Api::V1::Admin::EthnicitiesController, type: :request do
 
   end
 
-  describe "Benefit API Destroy" do
+  describe "Ethnicities API Destroy" do
 
     it "returns http not authorized when not signed in" do
       sign_out login_user
