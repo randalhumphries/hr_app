@@ -13,6 +13,7 @@ Rails.application.routes.draw do
         resources :races, except: [ :new, :edit ]
         resources :ethnicities, except: [ :new, :edit ]
         resources :benefit_types, except: [ :new, :edit ]
+        resources :remuneration_types, except: [ :new, :edit ]
       end
     end
 
