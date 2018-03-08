@@ -14,6 +14,7 @@ Rails.application.routes.draw do
         resources :ethnicities, except: [ :new, :edit ]
         resources :benefit_types, except: [ :new, :edit ]
         resources :remuneration_types, except: [ :new, :edit ]
+        resources :assignment_types, except: [ :new, :edit ]
       end
     end
 
