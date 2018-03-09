@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-07T22:36:19-05:00">2018-03-07T22:36:19-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-03-08T21:15:59-05:00">2018-03-08T21:15:59-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">97.6%</span></span>
+    (<span class="covered_percent"><span class="green">97.65%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.27
+         2.32
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>100</b> files in total.
-    <b>1502</b> relevant lines. 
-    <span class="green"><b>1466</b> lines covered</span> and
-    <span class="red"><b>36</b> lines missed </span>
+    <b>102</b> files in total.
+    <b>1657</b> relevant lines. 
+    <span class="green"><b>1618</b> lines covered</span> and
+    <span class="red"><b>39</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -78,6 +78,16 @@
         <td>25</td>
         <td>1</td>
         <td>2.8</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#3369d1b073965c9fe0b2b59ed762c027eca7d3c9" class="src_link" title="app/controllers/api/v1/admin/contact_types_controller.rb">app/controllers/api/v1/admin/contact_types_controller.rb</a></td>
+        <td class="green strong">96.15 %</td>
+        <td>52</td>
+        <td>26</td>
+        <td>25</td>
+        <td>1</td>
+        <td>2.2</td>
       </tr>
       
       <tr>
@@ -127,7 +137,7 @@
         <td>34</td>
         <td>30</td>
         <td>4</td>
-        <td>7.5</td>
+        <td>8.3</td>
       </tr>
       
       <tr>
@@ -533,9 +543,9 @@
       <tr>
         <td class="strong"><a href="#66950fccb3aa6c79ff023322f321e77e7495df23" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>25</td>
-        <td>17</td>
-        <td>17</td>
+        <td>26</td>
+        <td>18</td>
+        <td>18</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -637,7 +647,7 @@
         <td>3</td>
         <td>3</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>7.7</td>
       </tr>
       
       <tr>
@@ -687,7 +697,7 @@
         <td>3</td>
         <td>3</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>5.3</td>
       </tr>
       
       <tr>
@@ -707,7 +717,7 @@
         <td>3</td>
         <td>3</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>5.3</td>
       </tr>
       
       <tr>
@@ -747,7 +757,7 @@
         <td>14</td>
         <td>14</td>
         <td>0</td>
-        <td>10.4</td>
+        <td>11.8</td>
       </tr>
       
       <tr>
@@ -981,6 +991,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#85b74727f4ba5e62032aebbd299cf6d8263e61a4" class="src_link" title="spec/requests/api/v1/admin/contact_types_spec.rb">spec/requests/api/v1/admin/contact_types_spec.rb</a></td>
+        <td class="green strong">98.44 %</td>
+        <td>199</td>
+        <td>128</td>
+        <td>126</td>
+        <td>2</td>
+        <td>1.5</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#3ed600ffa61c61a9206b07f171199570714b8cf0" class="src_link" title="spec/requests/api/v1/admin/ethnicities_spec.rb">spec/requests/api/v1/admin/ethnicities_spec.rb</a></td>
         <td class="green strong">98.51 %</td>
         <td>208</td>
@@ -1047,7 +1067,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>47.4</td>
+        <td>54.8</td>
       </tr>
       
     </tbody>
@@ -1983,6 +2003,337 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="3369d1b073965c9fe0b2b59ed762c027eca7d3c9">
+  <div class="header">
+    <h3>app/controllers/api/v1/admin/contact_types_controller.rb</h3>
+    <h4><span class="green">96.15 %</span> covered</h4>
+    <div>
+      <b>26</b> relevant lines. 
+      <span class="green"><b>25</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Api::V1::Admin::ContactTypesController &lt; Api::V1Controller</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  before_action :find_contact_type, except: [ :index, :create ]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def index</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @contact_types = ContactType.all.sort</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    render :index</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def show</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    render :show</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def update</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="16">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    if @contact_type.update(contact_type_params)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="17">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      render :show</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      render_response(success: false, errors: @contact_type.errors, status: 200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def create</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="24">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    @contact_type = ContactType.new(contact_type_params)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="26">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    if @contact_type.save</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="27">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      render :show</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="29">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      render_response(success: false, errors: @contact_type.errors, status: 200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def destroy</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="34">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    if @contact_type.destroy</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="35">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      @contact_types = ContactType.all.sort</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="37">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      render :index</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="39">
+          
+          
+          <code class="ruby">      render_response(success: false, errors: @contact_type.errors, status: 200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="45">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def contact_type_params</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="46">
+          <span class="hits">8</span>
+          
+          <code class="ruby">      params.permit(:name)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def find_contact_type</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="50">
+          <span class="hits">8</span>
+          
+          <code class="ruby">      @contact_type = ContactType.find(params[:id])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby">end</code>
@@ -3559,44 +3910,44 @@
           <code class="ruby">  def render_response(opts={})</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="46">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="37" data-linenumber="46">
+          <span class="hits">37</span>
           
           <code class="ruby">    @success = opts.fetch(:success, true)</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="47">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="37" data-linenumber="47">
+          <span class="hits">37</span>
           
           <code class="ruby">    @errors = opts.fetch(:errors, nil)</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="48">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="37" data-linenumber="48">
+          <span class="hits">37</span>
           
           <code class="ruby">    @message = opts.fetch(:message, nil)</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="49">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="37" data-linenumber="49">
+          <span class="hits">37</span>
           
           <code class="ruby">    @ids = opts.fetch(:ids, nil)</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="50">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="37" data-linenumber="50">
+          <span class="hits">37</span>
           
           <code class="ruby">    @code = opts.fetch(:code, 200)</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="51">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="37" data-linenumber="51">
+          <span class="hits">37</span>
           
           <code class="ruby">    @code = 200 if @success == true</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="52">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="37" data-linenumber="52">
+          <span class="hits">37</span>
           
           <code class="ruby">    render &quot;/api/v1/shared/generic_response&quot;, status: @code</code>
         </li>
@@ -4358,7 +4709,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :name, presence: true</code>
+          <code class="ruby">  validates :name, presence: true, uniqueness: true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
@@ -8511,8 +8862,8 @@
     <h3>config/routes.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>17</b> relevant lines. 
-      <span class="green"><b>17</b> lines covered</span> and
+      <b>18</b> relevant lines. 
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -8622,49 +8973,55 @@
           <code class="ruby">        resources :assignment_types, except: [ :new, :edit ]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">        resources :contact_types, except: [ :new, :edit ]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="23">
           
-          <code class="ruby">  use_doorkeeper</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
+          <code class="ruby">  use_doorkeeper</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
           <code class="ruby">  devise_for :users</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">end</code>
@@ -9292,10 +9649,10 @@
           <code class="ruby">  factory :contact_type do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="21" data-linenumber="3">
+          <span class="hits">21</span>
           
-          <code class="ruby">    name &quot;MOBILE PHONE&quot;</code>
+          <code class="ruby">    name  { Faker::Lorem.words(1) }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -9615,10 +9972,10 @@
           <code class="ruby">  factory :ethnicity do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="14" data-linenumber="3">
+          <span class="hits">14</span>
           
-          <code class="ruby">    name &quot;NOT HISPANIC OR LATINO&quot;</code>
+          <code class="ruby">    name { Faker::Lorem.words(1) }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -9743,10 +10100,10 @@
           <code class="ruby">  factory :race do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="14" data-linenumber="3">
+          <span class="hits">14</span>
           
-          <code class="ruby">    name &quot;AMERICAN INDIAN OR PACIFIC ISLANDER&quot;</code>
+          <code class="ruby">    name  { Faker::Lorem.words(1) }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -9981,8 +10338,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="133" data-linenumber="5">
-          <span class="hits">133</span>
+        <li class="covered" data-hits="152" data-linenumber="5">
+          <span class="hits">152</span>
           
           <code class="ruby">    email                 { Faker::Internet.unique.email }</code>
         </li>
@@ -15255,6 +15612,1219 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="256">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="85b74727f4ba5e62032aebbd299cf6d8263e61a4">
+  <div class="header">
+    <h3>spec/requests/api/v1/admin/contact_types_spec.rb</h3>
+    <h4><span class="green">98.44 %</span> covered</h4>
+    <div>
+      <b>128</b> relevant lines. 
+      <span class="green"><b>126</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe Api::V1::Admin::ContactTypesController, type: :request do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="20" data-linenumber="5">
+          <span class="hits">20</span>
+          
+          <code class="ruby">  let(:login_user)    { create(:user, :admin) }</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="6">
+          <span class="hits">12</span>
+          
+          <code class="ruby">  let(:contact_type)  { create(:contact_type) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  before(:each) do</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="9">
+          <span class="hits">19</span>
+          
+          <code class="ruby">    @headers = { &#39;ACCEPT&#39;: &#39;application/json&#39;,  &#39;CONTENT-TYPE&#39;: &#39;application/json&#39; }</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="10">
+          <span class="hits">19</span>
+          
+          <code class="ruby">    sign_in login_user</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;Contact Types API Index&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;returns http not authorized when not signed in&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      sign_out login_user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get &quot;/api/v1/admin/contact_types&quot;, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(401)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http success when signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get &quot;/api/v1/admin/contact_types&quot;, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns the list of contact types&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @contact_types = []</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @contact_types &lt;&lt; build(:contact_type, name: &quot;EMAIL&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @contact_types &lt;&lt; build(:contact_type, name: &quot;HOME PHONE&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @contact_types.sort!</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get &quot;/api/v1/admin/contact_types&quot;, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(true)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u[:contact_types].each_with_index do |contact_type, index|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="37">
+          
+          
+          <code class="ruby">        expect(contact_type[:id]).to eq(@contact_types[index].id)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="38">
+          
+          
+          <code class="ruby">        expect(contact_type[:name]).to eq(@contact_types[index].name)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;Contact Types API Show&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http not authorized when not signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      sign_out login_user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get &quot;/api/v1/admin/contact_types/#{contact_type.id}&quot;, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(401)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http success when signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get &quot;/api/v1/admin/contact_types/#{contact_type.id}&quot;, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns the details of the specified contact type&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="58">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get &quot;/api/v1/admin/contact_types/#{contact_type.id}&quot;, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="60">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(true)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:contact_type][:id]).to eq(contact_type.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="63">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:contact_type][:name]).to eq(contact_type.name)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;Contact Types Create&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="70">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http not authorized when not signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params      = { name: &quot;EMAIL&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="72">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params_json = contact_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      sign_out login_user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      post &quot;/api/v1/admin/contact_types&quot;, params: contact_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="76">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(401)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="79">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http success when signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="80">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params      = { name: &quot;EMAIL&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="81">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params_json = contact_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="83">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      post &quot;/api/v1/admin/contact_types/&quot;, params: contact_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="84">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is successful with valid parameters&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="88">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params      = { name: &quot;EMAIL&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="89">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params_json = contact_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="91">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      post &quot;/api/v1/admin/contact_types&quot;, params: contact_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="92">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="93">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="94">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(true)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="95">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:contact_type][:name]).to eq(contact_type_params[:name])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="96">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="97">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="98">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is not successful without a name&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="99">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params      = { name: nil }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="100">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params_json = contact_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="101">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="102">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      post &quot;/api/v1/admin/contact_types&quot;, params: contact_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="103">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="104">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="105">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(false)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="106">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:errors][:name]).to eq([&quot;can&#39;t be blank&quot;])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="107">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="108">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="109">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is not successful with a dupliate name&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="110">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params      = create(:contact_type, name: &quot;EMAIL&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="111">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params_json = contact_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="112">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="113">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      post &quot;/api/v1/admin/contact_types&quot;, params: contact_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="114">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="115">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="116">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(false)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="117">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:errors][:name]).to eq([&quot;has already been taken&quot;])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="118">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="119">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="120">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="121">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="122">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;Contact Types Update&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="123">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="124">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http not authorized when not signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="125">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params      = { name: &quot;EMAIL&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="126">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params_json = contact_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="127">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="128">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      sign_out login_user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="129">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      patch &quot;/api/v1/admin/contact_types/#{contact_type.id}&quot;, params: contact_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="130">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(401)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="131">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="132">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="133">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http success when signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="134">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params      = { name: &quot;EMAIL&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="135">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params_json = contact_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="136">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="137">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      patch &quot;/api/v1/admin/contact_types/#{contact_type.id}&quot;, params: contact_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="138">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="139">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="140">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="141">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is successful with valid parameters&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="142">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params      = { name: &quot;EMAIL&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="143">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params_json = contact_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="144">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="145">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      patch &quot;/api/v1/admin/contact_types/#{contact_type.id}&quot;, params: contact_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="146">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="147">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="148">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(true)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="149">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:contact_type][:name]).to eq(contact_type_params[:name])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="150">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="151">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="152">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is not successful without a name&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="153">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params      = { name: nil }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="154">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params_json = contact_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="155">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="156">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      patch &quot;/api/v1/admin/contact_types/#{contact_type.id}&quot;, params: contact_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="157">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="158">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="159">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(false)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="160">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:errors][:name]).to eq([&quot;can&#39;t be blank&quot;])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="161">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="162">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="163">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is not successful with a dupliate name&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="164">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params      = create(:contact_type, name: &quot;EMAIL&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="165">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      contact_type_params_json = contact_type_params.to_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="166">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="167">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      patch &quot;/api/v1/admin/contact_types/#{contact_type.id}&quot;, params: contact_type_params_json, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="168">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="169">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="170">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(false)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="171">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:errors][:name]).to eq([&quot;has already been taken&quot;])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="172">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="173">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="174">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="175">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="176">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;Contact Types Destroy&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="177">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="178">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http not authorized when not signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="179">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      sign_out login_user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="180">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      delete &quot;/api/v1/admin/contact_types/#{contact_type.id}&quot;, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="181">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(401)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="182">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="183">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="184">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns http success when signed in&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="185">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      delete &quot;/api/v1/admin/contact_types/#{contact_type.id}&quot;, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="186">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="187">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="188">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="189">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns the list of contact types without the deleted contact type&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="190">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      delete &quot;/api/v1/admin/contact_types/#{contact_type.id}&quot;, headers: @headers</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="191">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status(200)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="192">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      u = JSON.parse(response.body).deep_symbolize_keys</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="193">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:success]).to eq(true)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="194">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(u[:contact_types].any? { |value| contact_type }).to eq(false)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="195">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="196">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="197">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="198">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="199">
           
           
           <code class="ruby">end</code>
@@ -20613,14 +22183,14 @@
           <code class="ruby">  def self.included(base)</code>
         </li>
       
-        <li class="covered" data-hits="130" data-linenumber="6">
-          <span class="hits">130</span>
+        <li class="covered" data-hits="150" data-linenumber="6">
+          <span class="hits">150</span>
           
           <code class="ruby">    base.before(:each) { Warden.test_mode! }</code>
         </li>
       
-        <li class="covered" data-hits="130" data-linenumber="7">
-          <span class="hits">130</span>
+        <li class="covered" data-hits="150" data-linenumber="7">
+          <span class="hits">150</span>
           
           <code class="ruby">    base.after(:each) { Warden.test_reset! }</code>
         </li>
@@ -20643,8 +22213,8 @@
           <code class="ruby">  def sign_in(resource)</code>
         </li>
       
-        <li class="covered" data-hits="121" data-linenumber="11">
-          <span class="hits">121</span>
+        <li class="covered" data-hits="140" data-linenumber="11">
+          <span class="hits">140</span>
           
           <code class="ruby">    login_as(resource, scope: warden_scope(resource))</code>
         </li>
@@ -20667,8 +22237,8 @@
           <code class="ruby">  def sign_out(resource)</code>
         </li>
       
-        <li class="covered" data-hits="30" data-linenumber="15">
-          <span class="hits">30</span>
+        <li class="covered" data-hits="35" data-linenumber="15">
+          <span class="hits">35</span>
           
           <code class="ruby">    logout(warden_scope(resource))</code>
         </li>
@@ -20703,8 +22273,8 @@
           <code class="ruby">  def warden_scope(resource)</code>
         </li>
       
-        <li class="covered" data-hits="151" data-linenumber="21">
-          <span class="hits">151</span>
+        <li class="covered" data-hits="175" data-linenumber="21">
+          <span class="hits">175</span>
           
           <code class="ruby">    resource.class.name.underscore.to_sym</code>
         </li>
