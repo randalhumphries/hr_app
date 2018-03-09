@@ -16,6 +16,7 @@ Rails.application.routes.draw do
         resources :remuneration_types, except: [ :new, :edit ]
         resources :assignment_types, except: [ :new, :edit ]
         resources :contact_types, except: [ :new, :edit ]
+        resources :certification_types, except: [ :new, :edit ]
       end
     end
 
