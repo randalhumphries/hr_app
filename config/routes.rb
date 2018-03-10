@@ -17,6 +17,7 @@ Rails.application.routes.draw do
         resources :assignment_types, except: [ :new, :edit ]
         resources :contact_types, except: [ :new, :edit ]
         resources :certification_types, except: [ :new, :edit ]
+        resources :relationship_types, except: [ :new, :edit ]
       end
     end
 
