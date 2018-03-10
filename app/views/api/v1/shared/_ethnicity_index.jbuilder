@@ -1,0 +1,1 @@
+json.ethnicities(@ethnicities)

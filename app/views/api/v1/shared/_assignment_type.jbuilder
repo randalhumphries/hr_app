@@ -1,0 +1,1 @@
+json.assignment_type(@assignment_type)
