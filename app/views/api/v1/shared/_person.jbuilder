@@ -1,0 +1,1 @@
+json.person(@person)
