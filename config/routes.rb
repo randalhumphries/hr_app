@@ -8,7 +8,9 @@ Rails.application.routes.draw do
     get "/v1/application_error" => 'v1#test_application_error'
 
     namespace :v1 do
-      resources :people, except: [ :new, :edit ]
+      resources :people, except: [ :new, :edit ] do
+        resources :emergency_contacts, except: [ :new, :edit ]
+      end
       resources :employees, except: [ :new, :edit ]
       resources :contacts, except: [ :new, :edit ]
       namespace :admin do

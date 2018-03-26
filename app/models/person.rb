@@ -3,4 +3,5 @@ class Person < ApplicationRecord
 
   has_one :employee
   has_many :contacts
+  has_many :emergency_contacts
 end
