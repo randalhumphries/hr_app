@@ -18,12 +18,12 @@ RSpec.describe Api::V1::ContactsController, type: :request do
 
     it 'returns http not authorized when not signed in' do
       sign_out login_user
-      get "/api/v1/contacts", headers: @headers
+      get "/api/v1/people/#{person.id}/contacts", headers: @headers
       expect(response).to have_http_status(401)
     end
 
     it "returns http success when signed in" do
-      get "/api/v1/contacts", headers: @headers
+      get "/api/v1/people/#{person.id}/contacts", headers: @headers
       expect(response).to have_http_status(200)
     end
 
@@ -33,7 +33,7 @@ RSpec.describe Api::V1::ContactsController, type: :request do
       @contacts << build(:contact,  person: person, contact_type: contact_type3)
       @contacts.sort!
 
-      get "/api/v1/contacts", headers: @headers
+      get "/api/v1/people/#{person.id}/contacts", headers: @headers
       expect(response).to have_http_status(200)
       u = JSON.parse(response.body).deep_symbolize_keys
       expect(u[:success]).to eq(true)
@@ -54,7 +54,7 @@ RSpec.describe Api::V1::ContactsController, type: :request do
       contact_params_json = contact_params.to_json
 
       sign_out login_user
-      get "/api/v1/contacts/#{contact.id}", params: contact_params_json, headers: @headers
+      get "/api/v1/people/#{person.id}/contacts/#{contact.id}", params: contact_params_json, headers: @headers
       expect(response).to have_http_status(401)
     end
 
@@ -62,7 +62,7 @@ RSpec.describe Api::V1::ContactsController, type: :request do
       contact_params      = { person_id: person.id, contact_type_id: contact_type1.id, contact: Faker::Internet.email }
       contact_params_json = contact_params.to_json
 
-      get "/api/v1/contacts/#{contact.id}", params: contact_params_json, headers: @headers
+      get "/api/v1/people/#{person.id}/contacts/#{contact.id}", params: contact_params_json, headers: @headers
       expect(response).to have_http_status(200)
     end
 
@@ -70,7 +70,7 @@ RSpec.describe Api::V1::ContactsController, type: :request do
       contact_params      = { person_id: person.id, contact_type_id: contact_type1.id, contact: Faker::Internet.email }
       contact_params_json = contact_params.to_json
 
-      get "/api/v1/contacts/#{contact.id}", params: contact_params_json, headers: @headers
+      get "/api/v1/people/#{person.id}/contacts/#{contact.id}", params: contact_params_json, headers: @headers
       expect(response).to have_http_status(200)
       u = JSON.parse(response.body).deep_symbolize_keys
       expect(u[:success]).to eq(true)
@@ -89,7 +89,7 @@ RSpec.describe Api::V1::ContactsController, type: :request do
       contact_params_json = contact_params.to_json
 
       sign_out login_user
-      post "/api/v1/contacts", params: contact_params_json, headers: @headers
+      post "/api/v1/people/#{person.id}/contacts", params: contact_params_json, headers: @headers
       expect(response).to have_http_status(401)
     end
 
@@ -97,7 +97,7 @@ RSpec.describe Api::V1::ContactsController, type: :request do
       contact_params      = { person_id: person.id, contact_type_id: contact_type1.id, contact: Faker::Internet.email }
       contact_params_json = contact_params.to_json
 
-      post "/api/v1/contacts/", params: contact_params_json, headers: @headers
+      post "/api/v1/people/#{person.id}/contacts/", params: contact_params_json, headers: @headers
       expect(response).to have_http_status(200)
     end
 
@@ -105,7 +105,7 @@ RSpec.describe Api::V1::ContactsController, type: :request do
       contact_params      = { person_id: person.id, contact_type_id: contact_type1.id, contact: Faker::Internet.email }
       contact_params_json = contact_params.to_json
 
-      post "/api/v1/contacts", params: contact_params_json, headers: @headers
+      post "/api/v1/people/#{person.id}/contacts", params: contact_params_json, headers: @headers
       expect(response).to have_http_status(200)
       u = JSON.parse(response.body).deep_symbolize_keys
       expect(u[:success]).to eq(true)
@@ -118,26 +118,18 @@ RSpec.describe Api::V1::ContactsController, type: :request do
       contact_params      = { person_id: person.id, contact_type_id: contact_type1.id, contact: nil }
       contact_params_json = contact_params.to_json
 
-      post "/api/v1/contacts", params: contact_params_json, headers: @headers
+      post "/api/v1/people/#{person.id}/contacts", params: contact_params_json, headers: @headers
       expect(response).to have_http_status(200)
       u = JSON.parse(response.body).deep_symbolize_keys
       expect(u[:success]).to eq(false)
       expect(u[:errors][:contact]).to eq(["can't be blank"])
     end
 
-    it "returns http not found without a person id" do
-      contact_params      = { person_id: nil, contact_type_id: contact_type1.id, contact: Faker::Internet.email }
-      contact_params_json = contact_params.to_json
-
-      post "/api/v1/contacts", params: contact_params_json, headers: @headers
-      expect(response).to have_http_status(404)
-    end
-
     it "is not successful without a contact type id" do
       contact_params      = { person_id: person.id, contact_type_id: nil, contact: Faker::Internet.email }
       contact_params_json = contact_params.to_json
 
-      post "/api/v1/contacts", params: contact_params_json, headers: @headers
+      post "/api/v1/people/#{person.id}/contacts", params: contact_params_json, headers: @headers
       expect(response).to have_http_status(200)
       u = JSON.parse(response.body).deep_symbolize_keys
       expect(u[:success]).to eq(false)
@@ -153,7 +145,7 @@ RSpec.describe Api::V1::ContactsController, type: :request do
       contact_params_json = contact_params.to_json
 
       sign_out login_user
-      patch "/api/v1/contacts/#{contact.id}", params: contact_params_json, headers: @headers
+      patch "/api/v1/people/#{person.id}/contacts/#{contact.id}", params: contact_params_json, headers: @headers
       expect(response).to have_http_status(401)
     end
 
@@ -161,7 +153,7 @@ RSpec.describe Api::V1::ContactsController, type: :request do
       contact_params      = { person_id: person.id, contact_type_id: contact_type1.id, contact: Faker::Internet.email }
       contact_params_json = contact_params.to_json
 
-      patch "/api/v1/contacts/#{contact.id}", params: contact_params_json, headers: @headers
+      patch "/api/v1/people/#{person.id}/contacts/#{contact.id}", params: contact_params_json, headers: @headers
       expect(response).to have_http_status(200)
     end
 
@@ -169,7 +161,7 @@ RSpec.describe Api::V1::ContactsController, type: :request do
       contact_params      = { person_id: person.id, contact_type_id: contact_type1.id, contact: Faker::Internet.email }
       contact_params_json = contact_params.to_json
 
-      patch "/api/v1/contacts/#{contact.id}", params: contact_params_json, headers: @headers
+      patch "/api/v1/people/#{person.id}/contacts/#{contact.id}", params: contact_params_json, headers: @headers
       expect(response).to have_http_status(200)
       u = JSON.parse(response.body).deep_symbolize_keys
       expect(u[:success]).to eq(true)
@@ -182,29 +174,18 @@ RSpec.describe Api::V1::ContactsController, type: :request do
       contact_params      = { person_id: person.id, contact_type_id: contact_type1.id, contact: nil }
       contact_params_json = contact_params.to_json
 
-      patch "/api/v1/contacts/#{contact.id}", params: contact_params_json, headers: @headers
+      patch "/api/v1/people/#{person.id}/contacts/#{contact.id}", params: contact_params_json, headers: @headers
       expect(response).to have_http_status(200)
       u = JSON.parse(response.body).deep_symbolize_keys
       expect(u[:success]).to eq(false)
       expect(u[:errors][:contact]).to eq(["can't be blank"])
     end
 
-    it "is not successful without a person id" do
-      contact_params      = { person_id: nil, contact_type_id: contact_type1.id, contact: Faker::Internet.email }
-      contact_params_json = contact_params.to_json
-
-      patch "/api/v1/contacts/#{contact.id}", params: contact_params_json, headers: @headers
-      expect(response).to have_http_status(200)
-      u = JSON.parse(response.body).deep_symbolize_keys
-      expect(u[:success]).to eq(false)
-      expect(u[:errors][:person]).to eq(["must exist"])
-    end
-
     it "is not successful without a contact type id" do
       contact_params      = { person_id: person.id, contact_type_id: nil, contact: Faker::Internet.email }
       contact_params_json = contact_params.to_json
 
-      patch "/api/v1/contacts/#{contact.id}", params: contact_params_json, headers: @headers
+      patch "/api/v1/people/#{person.id}/contacts/#{contact.id}", params: contact_params_json, headers: @headers
       expect(response).to have_http_status(200)
       u = JSON.parse(response.body).deep_symbolize_keys
       expect(u[:success]).to eq(false)
@@ -217,17 +198,17 @@ RSpec.describe Api::V1::ContactsController, type: :request do
 
     it "returns http not authorized when not signed in" do
       sign_out login_user
-      delete "/api/v1/contacts/#{contact.id}", headers: @headers
+      delete "/api/v1/people/#{person.id}/contacts/#{contact.id}", headers: @headers
       expect(response).to have_http_status(401)
     end
 
     it "returns http success when signed in" do
-      delete "/api/v1/contacts/#{contact.id}", headers: @headers
+      delete "/api/v1/people/#{person.id}/contacts/#{contact.id}", headers: @headers
       expect(response).to have_http_status(200)
     end
 
     it "returns the list of contact without the deleted contact" do
-      delete "/api/v1/contacts/#{contact.id}", headers: @headers
+      delete "/api/v1/people/#{person.id}/contacts/#{contact.id}", headers: @headers
       expect(response).to have_http_status(200)
       u = JSON.parse(response.body).deep_symbolize_keys
       expect(u[:success]).to eq(true)

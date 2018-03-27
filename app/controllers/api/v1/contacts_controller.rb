@@ -1,9 +1,10 @@
 class Api::V1::ContactsController < Api::V1Controller
 
+  before_action :find_person
   before_action :find_contact, except: [ :index, :create ]
 
   def index
-    @contacts = Contact.all.sort
+    @contacts = @person.contacts.sort
 
     render :index
   end
@@ -21,7 +22,7 @@ class Api::V1::ContactsController < Api::V1Controller
   end
 
   def create
-    @contact = Person.find(params[:person_id]).contacts.build(contact_params)
+    @contact = @person.contacts.build(contact_params)
 
     if @contact.save
       render :show
@@ -32,7 +33,7 @@ class Api::V1::ContactsController < Api::V1Controller
 
   def destroy
     if @contact.destroy
-      @contacts = Contact.all.sort
+      @contacts = @person.contacts.sort
 
       render :index
     else
@@ -46,8 +47,12 @@ class Api::V1::ContactsController < Api::V1Controller
       params.permit(:contact, :person_id, :contact_type_id)
     end
 
+    def find_person
+      @person = Person.find(params[:person_id])
+    end
+
     def find_contact
-      @contact = Contact.find(params[:id])
+      @contact = @person.contacts.find(params[:id])
     end
 
 end
