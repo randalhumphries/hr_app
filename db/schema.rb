@@ -119,21 +119,6 @@ ActiveRecord::Schema.define(version: 20180331004059) do
     t.index ["person_id"], name: "index_contacts_on_person_id"
   end
 
-  create_table "demographics", force: :cascade do |t|
-    t.bigint "race_id"
-    t.bigint "ethnicity_id"
-    t.bigint "contact_id"
-    t.bigint "emergency_contact_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "person_id"
-    t.index ["contact_id"], name: "index_demographics_on_contact_id"
-    t.index ["emergency_contact_id"], name: "index_demographics_on_emergency_contact_id"
-    t.index ["ethnicity_id"], name: "index_demographics_on_ethnicity_id"
-    t.index ["person_id"], name: "index_demographics_on_person_id"
-    t.index ["race_id"], name: "index_demographics_on_race_id"
-  end
-
   create_table "emergency_contacts", force: :cascade do |t|
     t.bigint "relationship_type_id"
     t.string "first_name"
@@ -282,11 +267,6 @@ ActiveRecord::Schema.define(version: 20180331004059) do
   add_foreign_key "company_units", "employees", column: "manager"
   add_foreign_key "contacts", "contact_types"
   add_foreign_key "contacts", "people"
-  add_foreign_key "demographics", "contacts"
-  add_foreign_key "demographics", "emergency_contacts"
-  add_foreign_key "demographics", "ethnicities"
-  add_foreign_key "demographics", "people"
-  add_foreign_key "demographics", "races"
   add_foreign_key "emergency_contacts", "contact_types"
   add_foreign_key "emergency_contacts", "people"
   add_foreign_key "emergency_contacts", "relationship_types"
