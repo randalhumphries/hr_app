@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180331004059) do
+ActiveRecord::Schema.define(version: 20180331214355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -202,6 +202,24 @@ ActiveRecord::Schema.define(version: 20180331004059) do
     t.index ["user_id"], name: "index_people_on_user_id"
   end
 
+  create_table "people_ethnicities", force: :cascade do |t|
+    t.bigint "person_id"
+    t.bigint "ethnicity_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ethnicity_id"], name: "index_people_ethnicities_on_ethnicity_id"
+    t.index ["person_id"], name: "index_people_ethnicities_on_person_id"
+  end
+
+  create_table "people_races", force: :cascade do |t|
+    t.bigint "person_id"
+    t.bigint "race_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["person_id"], name: "index_people_races_on_person_id"
+    t.index ["race_id"], name: "index_people_races_on_race_id"
+  end
+
   create_table "races", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -274,6 +292,10 @@ ActiveRecord::Schema.define(version: 20180331004059) do
   add_foreign_key "oauth_access_grants", "oauth_applications", column: "application_id"
   add_foreign_key "oauth_access_tokens", "oauth_applications", column: "application_id"
   add_foreign_key "people", "users"
+  add_foreign_key "people_ethnicities", "ethnicities"
+  add_foreign_key "people_ethnicities", "people"
+  add_foreign_key "people_races", "people"
+  add_foreign_key "people_races", "races"
   add_foreign_key "remunerations", "employees"
   add_foreign_key "remunerations", "employees", column: "updated_by"
   add_foreign_key "remunerations", "remuneration_types"

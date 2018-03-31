@@ -671,22 +671,11 @@
       "/Users/randal/Projects/hr_app/spec/factories/contact_types.rb": [
         1,
         1,
-        43,
+        41,
         null,
         null
       ],
       "/Users/randal/Projects/hr_app/spec/factories/contacts.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/randal/Projects/hr_app/spec/factories/demographics.rb": [
-        1,
-        1,
         1,
         1,
         1,
@@ -700,10 +689,10 @@
         1,
         1,
         1,
-        21,
-        21,
+        20,
+        20,
         1,
-        21,
+        20,
         null,
         null
       ],
@@ -720,33 +709,49 @@
       "/Users/randal/Projects/hr_app/spec/factories/ethnicities.rb": [
         1,
         1,
-        14,
+        13,
         null,
         null
       ],
       "/Users/randal/Projects/hr_app/spec/factories/people.rb": [
         1,
         1,
-        170,
-        171,
-        170,
-        171,
-        171,
-        170,
+        167,
+        168,
+        167,
+        168,
+        168,
+        167,
+        null,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/spec/factories/people_ethnicities.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/spec/factories/people_races.rb": [
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
       "/Users/randal/Projects/hr_app/spec/factories/races.rb": [
         1,
         1,
-        14,
+        13,
         null,
         null
       ],
       "/Users/randal/Projects/hr_app/spec/factories/relationship_types.rb": [
         1,
         1,
-        41,
+        40,
         null,
         null
       ],
@@ -1143,26 +1148,6 @@
         1,
         null
       ],
-      "/Users/randal/Projects/hr_app/spec/models/demographic_spec.rb": [
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/randal/Projects/hr_app/app/models/demographic.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
       "/Users/randal/Projects/hr_app/spec/models/emergency_contact_spec.rb": [
         1,
         null,
@@ -1290,6 +1275,10 @@
         1,
         1,
         null,
+        1,
+        1,
+        1,
+        1,
         1,
         1,
         1,
@@ -6334,8 +6323,20 @@
         null,
         null,
         null
+      ],
+      "/Users/randal/Projects/hr_app/app/models/people_race.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/randal/Projects/hr_app/app/models/people_ethnicity.rb": [
+        1,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1522514607
+    "timestamp": 1522533427
   }
 }
