@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::Admin::RelationshipTypesController, type: :request do
 
+  let(:random_name)        { generate_random_string(16) }
   let(:login_user)         { create(:user, :admin) }
-  let(:relationship_type)  { create(:relationship_type) }
+  let(:relationship_type)  { create(:relationship_type, name: random_name) }
 
   before(:each) do
     @headers = { 'ACCEPT': 'application/json',  'CONTENT-TYPE': 'application/json' }

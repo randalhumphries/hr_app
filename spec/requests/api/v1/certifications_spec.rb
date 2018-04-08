@@ -2,11 +2,12 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::CertificationsController, type: :request do
 
+  let(:random_name)         { generate_random_string(16) }
   let(:login_user)          { create(:user) }
   let(:person)              { create(:person) }
   let(:employee)            { create(:employee, person: person) }
   let(:certification)       { create(:certification, person: person) }
-  let(:certification_type)  { create(:certification_type) }
+  let(:certification_type)  { create(:certification_type, name: random_name) }
 
   before(:each) do
     @headers = { 'ACCEPT': 'application/json',  'CONTENT-TYPE': 'application/json' }

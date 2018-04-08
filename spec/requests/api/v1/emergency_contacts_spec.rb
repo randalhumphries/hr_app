@@ -2,9 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::EmergencyContactsController, type: :request do
 
+  let(:random_name)      { generate_random_string(16) }
   let(:login_user)        { create(:user) }
   let(:person)            { create(:person) }
-  let(:relationship_type) { create(:relationship_type) }
+  let(:relationship_type) { create(:relationship_type, name: random_name) }
   let(:contact_type)      { create(:contact_type) }
   let(:emergency_contact) { create(
                                     :emergency_contact,

@@ -2,12 +2,16 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::BenefitsController, type: :request do
 
+  let(:random_name1)  { generate_random_string(16) }
+  let(:random_name2)  { generate_random_string(16) }
+  let(:random_name3)  { generate_random_string(16) }
   let(:login_user)    { create(:user) }
   let(:person)        { create(:person) }
   let(:employee)      { create(:employee, person: person) }
-  let(:benefit)       { create(:benefit, employee: employee) }
-  let(:benefit_type1) { create(:benefit_type, name: "Health Insurance")}
-  let(:benefit_type2) { create(:benefit_type, name: "Family/Medical Leave")}
+  let(:benefit_type1) { create(:benefit_type, name: random_name1) }
+  let(:benefit_type2) { create(:benefit_type, name: random_name2) }
+  let(:benefit_type3) { create(:benefit_type, name: random_name3) }
+  let(:benefit)       { create(:benefit, benefit_type: benefit_type1, employee: employee) }
 
   before(:each) do
     @headers = { 'ACCEPT': 'application/json',  'CONTENT-TYPE': 'application/json' }
@@ -29,8 +33,8 @@ RSpec.describe Api::V1::BenefitsController, type: :request do
 
     it "returns the list of benefits" do
       @benefits = []
-      @benefits << build(:benefit, employee: employee, benefit_type: benefit_type1)
       @benefits << build(:benefit, employee: employee, benefit_type: benefit_type2)
+      @benefits << build(:benefit, employee: employee, benefit_type: benefit_type3)
       @benefits.sort!
 
       get "/api/v1/employees/#{employee.id}/benefits", headers: @headers

@@ -2,11 +2,14 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::ContactsController, type: :request do
 
+  let(:random_name1)   { generate_random_string(16) }
+  let(:random_name2)   { generate_random_string(16) }
+  let(:random_name3)   { generate_random_string(16) }
   let(:login_user)     { create(:user) }
   let(:person)         { create(:person) }
-  let(:contact_type1)  { create(:contact_type, name: "EMAIL")}
-  let(:contact_type2)  { create(:contact_type, name: "HOME PHONE")}
-  let(:contact_type3)  { create(:contact_type, name: "MOBILE PHONE")}
+  let(:contact_type1)  { create(:contact_type, name: random_name1) }
+  let(:contact_type2)  { create(:contact_type, name: random_name2) }
+  let(:contact_type3)  { create(:contact_type, name: random_name3) }
   let(:contact)        { create(:contact, person: person, contact_type: contact_type1) }
 
   before(:each) do

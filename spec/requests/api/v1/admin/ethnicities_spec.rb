@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::Admin::EthnicitiesController, type: :request do
 
-  let(:login_user) { create(:user, :admin) }
-  let(:ethnicity)       { create(:ethnicity) }
+  let(:random_name) { generate_random_string(16) }
+  let(:login_user)  { create(:user, :admin) }
+  let(:ethnicity)   { create(:ethnicity, name: random_name) }
 
   before(:each) do
     @headers = { 'ACCEPT': 'application/json',  'CONTENT-TYPE': 'application/json' }
