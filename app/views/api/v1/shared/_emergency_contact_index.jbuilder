@@ -1,0 +1,1 @@
+json.emergency_contacts(@emergency_contacts)

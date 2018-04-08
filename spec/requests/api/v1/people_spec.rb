@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Api::V1::PeopleController, type: :request do
 
   let(:login_user)  { create(:user) }
-  let(:person)     { create(:person) }
+  let(:person)      { create(:person) }
 
   before(:each) do
     @headers = { 'ACCEPT': 'application/json',  'CONTENT-TYPE': 'application/json' }

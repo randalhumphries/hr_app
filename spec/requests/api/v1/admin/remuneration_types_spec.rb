@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::Admin::RemunerationTypesController, type: :request do
 
-  let(:login_user) { create(:user, :admin) }
-  let(:remuneration_type)       { create(:remuneration_type) }
+  let(:random_name)       { generate_random_string(16) }
+  let(:login_user)        { create(:user, :admin) }
+  let(:remuneration_type) { create(:remuneration_type, name: random_name) }
 
   before(:each) do
     @headers = { 'ACCEPT': 'application/json',  'CONTENT-TYPE': 'application/json' }

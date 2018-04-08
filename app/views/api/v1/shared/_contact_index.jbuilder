@@ -1,0 +1,1 @@
+json.contacts(@contacts)

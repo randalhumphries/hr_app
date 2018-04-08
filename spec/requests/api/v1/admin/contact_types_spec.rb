@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::Admin::ContactTypesController, type: :request do
 
+  let(:random_name)   { generate_random_string(16) }
   let(:login_user)    { create(:user, :admin) }
-  let(:contact_type)  { create(:contact_type) }
+  let(:contact_type)  { create(:contact_type, name: random_name) }
 
   before(:each) do
     @headers = { 'ACCEPT': 'application/json',  'CONTENT-TYPE': 'application/json' }

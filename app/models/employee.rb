@@ -5,6 +5,7 @@ class Employee < ApplicationRecord
   before_validation :create_temp_hire_date
 
   belongs_to :person
+  has_many :benefits
 
   private
 

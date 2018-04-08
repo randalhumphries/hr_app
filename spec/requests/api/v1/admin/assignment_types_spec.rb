@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::Admin::AssignmentTypesController, type: :request do
 
+  let(:random_name)   { generate_random_string(16) }
   let(:login_user)            { create(:user, :admin) }
-  let(:assignment_type)       { create(:assignment_type) }
+  let(:assignment_type)       { create(:assignment_type, name: random_name) }
 
   before(:each) do
     @headers = { 'ACCEPT': 'application/json',  'CONTENT-TYPE': 'application/json' }

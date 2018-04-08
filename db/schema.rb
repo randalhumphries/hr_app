@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180304171054) do
+ActiveRecord::Schema.define(version: 20180408145756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20180304171054) do
     t.string "address_2"
     t.string "city"
     t.string "state"
-    t.integer "zip"
+    t.string "zip"
     t.string "country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -76,7 +76,6 @@ ActiveRecord::Schema.define(version: 20180304171054) do
   end
 
   create_table "certifications", force: :cascade do |t|
-    t.bigint "employee_id"
     t.bigint "certification_type_id"
     t.string "certification_number"
     t.date "renewed_at"
@@ -84,8 +83,9 @@ ActiveRecord::Schema.define(version: 20180304171054) do
     t.integer "updated_by"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "person_id"
     t.index ["certification_type_id"], name: "index_certifications_on_certification_type_id"
-    t.index ["employee_id"], name: "index_certifications_on_employee_id"
+    t.index ["person_id"], name: "index_certifications_on_person_id"
   end
 
   create_table "companies", force: :cascade do |t|
@@ -99,6 +99,8 @@ ActiveRecord::Schema.define(version: 20180304171054) do
     t.integer "manager"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "company_id"
+    t.index ["company_id"], name: "index_company_units_on_company_id"
   end
 
   create_table "contact_types", force: :cascade do |t|
@@ -117,21 +119,6 @@ ActiveRecord::Schema.define(version: 20180304171054) do
     t.index ["person_id"], name: "index_contacts_on_person_id"
   end
 
-  create_table "demographics", force: :cascade do |t|
-    t.bigint "race_id"
-    t.bigint "ethnicity_id"
-    t.bigint "contact_id"
-    t.bigint "emergency_contact_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "person_id"
-    t.index ["contact_id"], name: "index_demographics_on_contact_id"
-    t.index ["emergency_contact_id"], name: "index_demographics_on_emergency_contact_id"
-    t.index ["ethnicity_id"], name: "index_demographics_on_ethnicity_id"
-    t.index ["person_id"], name: "index_demographics_on_person_id"
-    t.index ["race_id"], name: "index_demographics_on_race_id"
-  end
-
   create_table "emergency_contacts", force: :cascade do |t|
     t.bigint "relationship_type_id"
     t.string "first_name"
@@ -140,7 +127,9 @@ ActiveRecord::Schema.define(version: 20180304171054) do
     t.string "contact"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "person_id"
     t.index ["contact_type_id"], name: "index_emergency_contacts_on_contact_type_id"
+    t.index ["person_id"], name: "index_emergency_contacts_on_person_id"
     t.index ["relationship_type_id"], name: "index_emergency_contacts_on_relationship_type_id"
   end
 
@@ -213,6 +202,24 @@ ActiveRecord::Schema.define(version: 20180304171054) do
     t.index ["user_id"], name: "index_people_on_user_id"
   end
 
+  create_table "people_ethnicities", force: :cascade do |t|
+    t.bigint "person_id"
+    t.bigint "ethnicity_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ethnicity_id"], name: "index_people_ethnicities_on_ethnicity_id"
+    t.index ["person_id"], name: "index_people_ethnicities_on_person_id"
+  end
+
+  create_table "people_races", force: :cascade do |t|
+    t.bigint "person_id"
+    t.bigint "race_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["person_id"], name: "index_people_races_on_person_id"
+    t.index ["race_id"], name: "index_people_races_on_race_id"
+  end
+
   create_table "races", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -272,22 +279,23 @@ ActiveRecord::Schema.define(version: 20180304171054) do
   add_foreign_key "benefits", "employees"
   add_foreign_key "benefits", "employees", column: "updated_by"
   add_foreign_key "certifications", "certification_types"
-  add_foreign_key "certifications", "employees"
   add_foreign_key "certifications", "employees", column: "updated_by"
+  add_foreign_key "certifications", "people"
+  add_foreign_key "company_units", "companies"
   add_foreign_key "company_units", "employees", column: "manager"
   add_foreign_key "contacts", "contact_types"
   add_foreign_key "contacts", "people"
-  add_foreign_key "demographics", "contacts"
-  add_foreign_key "demographics", "emergency_contacts"
-  add_foreign_key "demographics", "ethnicities"
-  add_foreign_key "demographics", "people"
-  add_foreign_key "demographics", "races"
   add_foreign_key "emergency_contacts", "contact_types"
+  add_foreign_key "emergency_contacts", "people"
   add_foreign_key "emergency_contacts", "relationship_types"
   add_foreign_key "employees", "people"
   add_foreign_key "oauth_access_grants", "oauth_applications", column: "application_id"
   add_foreign_key "oauth_access_tokens", "oauth_applications", column: "application_id"
   add_foreign_key "people", "users"
+  add_foreign_key "people_ethnicities", "ethnicities"
+  add_foreign_key "people_ethnicities", "people"
+  add_foreign_key "people_races", "people"
+  add_foreign_key "people_races", "races"
   add_foreign_key "remunerations", "employees"
   add_foreign_key "remunerations", "employees", column: "updated_by"
   add_foreign_key "remunerations", "remuneration_types"

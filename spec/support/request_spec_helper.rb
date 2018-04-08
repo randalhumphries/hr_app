@@ -21,4 +21,11 @@ module RequestSpecHelper
     resource.class.name.underscore.to_sym
   end
 
+  def generate_random_string(length)
+    characters = []
+    characters.push('A'..'Z')
+    characters.push('a'..'z')
+    Array.new(16) { characters.sample }.join
+  end
+
 end
