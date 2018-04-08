@@ -7,5 +7,6 @@ FactoryBot.define do
     suffix        { Faker::Name.suffix }
     date_of_birth { Faker::Date.birthday(18, 65) }
     company
+    user
   end
 end

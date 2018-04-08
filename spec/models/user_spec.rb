@@ -10,4 +10,8 @@ RSpec.describe User, type: :model do
     expect(build(:user, email: nil)).not_to be_valid
   end
 
+  it 'is not valid without a company' do
+    expect(build(:user, company: nil)).not_to be_valid
+  end
+
 end

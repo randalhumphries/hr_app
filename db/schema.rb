@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180408191741) do
+ActiveRecord::Schema.define(version: 20180408200056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -269,6 +269,8 @@ ActiveRecord::Schema.define(version: 20180408191741) do
     t.datetime "updated_at", null: false
     t.boolean "active"
     t.boolean "admin", default: false
+    t.bigint "company_id"
+    t.index ["company_id"], name: "index_users_on_company_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -302,4 +304,5 @@ ActiveRecord::Schema.define(version: 20180408191741) do
   add_foreign_key "remunerations", "employees"
   add_foreign_key "remunerations", "employees", column: "updated_by"
   add_foreign_key "remunerations", "remuneration_types"
+  add_foreign_key "users", "companies"
 end

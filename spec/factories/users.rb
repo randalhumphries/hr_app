@@ -7,6 +7,7 @@ FactoryBot.define do
     password_confirmation password
     active                true
     admin                 false
+    company
 
     trait :admin do
       admin true

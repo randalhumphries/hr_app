@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::Admin::CompaniesController, type: :request do
 
-  let(:login_user)  { create(:user, :admin) }
   let(:company)     { create(:company) }
+  let(:login_user)  { create(:user, :admin, company: company) }
 
   before(:each) do
     @headers = { 'ACCEPT': 'application/json',  'CONTENT-TYPE': 'application/json' }
@@ -23,10 +23,11 @@ RSpec.describe Api::V1::Admin::CompaniesController, type: :request do
       expect(response).to have_http_status(200)
     end
 
-    it "returns the list of company" do
+    it "returns the list of companies" do
       @company = []
-      @company << build(:company, name: "BOB'S BISCUITS")
-      @company << build(:company, name: "KELLY'S KAKES")
+      @company << create(:company, name: "BOB'S BISCUITS")
+      @company << create(:company, name: "KELLY'S KAKES")
+      @company << company
       @company.sort!
 
       get "/api/v1/admin/companies", headers: @headers
