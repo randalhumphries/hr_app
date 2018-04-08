@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180408145756) do
+ActiveRecord::Schema.define(version: 20180408191741) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -199,6 +199,8 @@ ActiveRecord::Schema.define(version: 20180408145756) do
     t.datetime "updated_at", null: false
     t.date "date_of_birth"
     t.bigint "user_id"
+    t.bigint "company_id"
+    t.index ["company_id"], name: "index_people_on_company_id"
     t.index ["user_id"], name: "index_people_on_user_id"
   end
 
@@ -291,6 +293,7 @@ ActiveRecord::Schema.define(version: 20180408145756) do
   add_foreign_key "employees", "people"
   add_foreign_key "oauth_access_grants", "oauth_applications", column: "application_id"
   add_foreign_key "oauth_access_tokens", "oauth_applications", column: "application_id"
+  add_foreign_key "people", "companies"
   add_foreign_key "people", "users"
   add_foreign_key "people_ethnicities", "ethnicities"
   add_foreign_key "people_ethnicities", "people"

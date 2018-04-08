@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe Api::V1::PeopleController, type: :request do
 
   let(:login_user)  { create(:user) }
-  let(:person)      { create(:person) }
+  let(:company)     { create(:company) }
+  let(:person)      { create(:person, company: company) }
 
   before(:each) do
     @headers = { 'ACCEPT': 'application/json',  'CONTENT-TYPE': 'application/json' }
@@ -41,6 +42,7 @@ RSpec.describe Api::V1::PeopleController, type: :request do
         expect(person[:prefix]).to eq(@people[index].prefix)
         expect(person[:suffix]).to eq(@people[index].suffix)
         expect(person[:date_of_birth]).to eq(@people[index].date_of_birth)
+        expect(person[:company_id]).to eq(@people[index].company_id)
       end
     end
 
@@ -49,7 +51,7 @@ RSpec.describe Api::V1::PeopleController, type: :request do
   describe "People API Show" do
 
     it "returns http not authorized when not signed in" do
-      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12' }
+      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12', company_id: company.id }
       person_params_json = person_params.to_json
 
       sign_out login_user
@@ -58,7 +60,7 @@ RSpec.describe Api::V1::PeopleController, type: :request do
     end
 
     it "returns http success when signed in" do
-      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12' }
+      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12', company_id: company.id }
       person_params_json = person_params.to_json
 
       get "/api/v1/people/#{person.id}", params: person_params_json, headers: @headers
@@ -66,7 +68,7 @@ RSpec.describe Api::V1::PeopleController, type: :request do
     end
 
     it "returns the details of the specified person" do
-      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12' }
+      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12', company_id: company.id }
       person_params_json = person_params.to_json
 
       get "/api/v1/people/#{person.id}", params: person_params_json, headers: @headers
@@ -87,7 +89,7 @@ RSpec.describe Api::V1::PeopleController, type: :request do
   describe "People API Create" do
 
     it "returns http not authorized when not signed in" do
-      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12' }
+      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12', company_id: company.id }
       person_params_json = person_params.to_json
 
       sign_out login_user
@@ -96,7 +98,7 @@ RSpec.describe Api::V1::PeopleController, type: :request do
     end
 
     it "returns http success when signed in" do
-      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12' }
+      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12', company_id: company.id }
       person_params_json = person_params.to_json
 
       post "/api/v1/people/", params: person_params_json, headers: @headers
@@ -104,7 +106,7 @@ RSpec.describe Api::V1::PeopleController, type: :request do
     end
 
     it "is successful with valid parameters" do
-      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12' }
+      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12', company_id: company.id }
       person_params_json = person_params.to_json
 
       post "/api/v1/people", params: person_params_json, headers: @headers
@@ -117,7 +119,7 @@ RSpec.describe Api::V1::PeopleController, type: :request do
     end
 
     it "is not successful without a first name" do
-      person_params      = { first_name: nil, last_name: "McDaniel", date_of_birth: '1968-01-12' }
+      person_params      = { first_name: nil, last_name: "McDaniel", date_of_birth: '1968-01-12', company_id: company.id }
       person_params_json = person_params.to_json
 
       post "/api/v1/people", params: person_params_json, headers: @headers
@@ -128,7 +130,7 @@ RSpec.describe Api::V1::PeopleController, type: :request do
     end
 
     it "is not successful without a last name" do
-      person_params      = { first_name: "Kelly", last_name: nil, date_of_birth: '1968-01-12' }
+      person_params      = { first_name: "Kelly", last_name: nil, date_of_birth: '1968-01-12', company_id: company.id }
       person_params_json = person_params.to_json
 
       post "/api/v1/people", params: person_params_json, headers: @headers
@@ -139,7 +141,7 @@ RSpec.describe Api::V1::PeopleController, type: :request do
     end
 
     it "is not successful without a date of birth" do
-      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: nil }
+      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: nil, company_id: company.id }
       person_params_json = person_params.to_json
 
       post "/api/v1/people", params: person_params_json, headers: @headers
@@ -149,12 +151,23 @@ RSpec.describe Api::V1::PeopleController, type: :request do
       expect(u[:errors][:date_of_birth]).to eq(["can't be blank"])
     end
 
+    it "is not successful without a company" do
+      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12', company_id: nil }
+      person_params_json = person_params.to_json
+
+      post "/api/v1/people", params: person_params_json, headers: @headers
+      expect(response).to have_http_status(200)
+      u = JSON.parse(response.body).deep_symbolize_keys
+      expect(u[:success]).to eq(false)
+      expect(u[:errors][:company]).to eq(["must exist"])
+    end
+
   end
 
   describe "People API Update" do
 
     it "returns http not authorized when not signed in" do
-      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12' }
+      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12', company_id: company.id }
       person_params_json = person_params.to_json
 
       sign_out login_user
@@ -163,7 +176,7 @@ RSpec.describe Api::V1::PeopleController, type: :request do
     end
 
     it "returns http success when signed in" do
-      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12' }
+      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12', company_id: company.id }
       person_params_json = person_params.to_json
 
       patch "/api/v1/people/#{person.id}", params: person_params_json, headers: @headers
@@ -171,7 +184,7 @@ RSpec.describe Api::V1::PeopleController, type: :request do
     end
 
     it "is successful with valid parameters" do
-      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12' }
+      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12', company_id: company.id }
       person_params_json = person_params.to_json
 
       patch "/api/v1/people/#{person.id}", params: person_params_json, headers: @headers
@@ -184,7 +197,7 @@ RSpec.describe Api::V1::PeopleController, type: :request do
     end
 
     it "is not successful without a first name" do
-      person_params      = { first_name: nil, last_name: "McDaniel", date_of_birth: '1968-01-12' }
+      person_params      = { first_name: nil, last_name: "McDaniel", date_of_birth: '1968-01-12', company_id: company.id }
       person_params_json = person_params.to_json
 
       patch "/api/v1/people/#{person.id}", params: person_params_json, headers: @headers
@@ -195,7 +208,7 @@ RSpec.describe Api::V1::PeopleController, type: :request do
     end
 
     it "is not successful without a last name" do
-      person_params      = { first_name: "Kelly", last_name: nil, date_of_birth: '1968-01-12' }
+      person_params      = { first_name: "Kelly", last_name: nil, date_of_birth: '1968-01-12', company_id: company.id }
       person_params_json = person_params.to_json
 
       patch "/api/v1/people/#{person.id}", params: person_params_json, headers: @headers
@@ -206,7 +219,7 @@ RSpec.describe Api::V1::PeopleController, type: :request do
     end
 
     it "is not successful without a date of birth" do
-      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: nil }
+      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: nil, company_id: company.id }
       person_params_json = person_params.to_json
 
       patch "/api/v1/people/#{person.id}", params: person_params_json, headers: @headers
@@ -214,6 +227,17 @@ RSpec.describe Api::V1::PeopleController, type: :request do
       u = JSON.parse(response.body).deep_symbolize_keys
       expect(u[:success]).to eq(false)
       expect(u[:errors][:date_of_birth]).to eq(["can't be blank"])
+    end
+
+    it "is not successful without a company" do
+      person_params      = { first_name: "Kelly", last_name: "McDaniel", date_of_birth: '1968-01-12', company_id: nil }
+      person_params_json = person_params.to_json
+
+      patch "/api/v1/people/#{person.id}", params: person_params_json, headers: @headers
+      expect(response).to have_http_status(200)
+      u = JSON.parse(response.body).deep_symbolize_keys
+      expect(u[:success]).to eq(false)
+      expect(u[:errors][:company]).to eq(["must exist"])
     end
 
   end

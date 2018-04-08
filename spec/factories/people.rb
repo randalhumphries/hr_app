@@ -6,5 +6,6 @@ FactoryBot.define do
     prefix        { Faker::Name.prefix }
     suffix        { Faker::Name.suffix }
     date_of_birth { Faker::Date.birthday(18, 65) }
+    company
   end
 end

@@ -43,7 +43,7 @@ class Api::V1::PeopleController < Api::V1Controller
   private
 
     def person_params
-      params.permit(:first_name, :middle_name, :last_name, :prefix, :suffix, :date_of_birth)
+      params.permit(:first_name, :middle_name, :last_name, :prefix, :suffix, :date_of_birth, :company_id)
     end
 
     def find_person

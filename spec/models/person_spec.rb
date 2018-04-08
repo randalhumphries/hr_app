@@ -18,4 +18,8 @@ RSpec.describe Person, type: :model do
     expect(build(:person, date_of_birth: nil)).not_to be_valid
   end
 
+  it 'is not valid without a company' do
+    expect(build(:person, company: nil)).not_to be_valid
+  end
+
 end
