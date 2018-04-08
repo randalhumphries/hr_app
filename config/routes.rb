@@ -12,6 +12,7 @@ Rails.application.routes.draw do
         resources :contacts, except: [ :new, :edit ]
         resources :emergency_contacts, except: [ :new, :edit ]
         resources :addresses, except: [ :new, :edit ]
+        resources :certifications, except: [ :new, :edit ]
       end
       resources :employees, except: [ :new, :edit ] do
         resources :benefits, except: [ :new, :edit ]

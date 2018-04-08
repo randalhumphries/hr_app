@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180331214355) do
+ActiveRecord::Schema.define(version: 20180408145756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,7 +76,6 @@ ActiveRecord::Schema.define(version: 20180331214355) do
   end
 
   create_table "certifications", force: :cascade do |t|
-    t.bigint "employee_id"
     t.bigint "certification_type_id"
     t.string "certification_number"
     t.date "renewed_at"
@@ -84,8 +83,9 @@ ActiveRecord::Schema.define(version: 20180331214355) do
     t.integer "updated_by"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "person_id"
     t.index ["certification_type_id"], name: "index_certifications_on_certification_type_id"
-    t.index ["employee_id"], name: "index_certifications_on_employee_id"
+    t.index ["person_id"], name: "index_certifications_on_person_id"
   end
 
   create_table "companies", force: :cascade do |t|
@@ -279,8 +279,8 @@ ActiveRecord::Schema.define(version: 20180331214355) do
   add_foreign_key "benefits", "employees"
   add_foreign_key "benefits", "employees", column: "updated_by"
   add_foreign_key "certifications", "certification_types"
-  add_foreign_key "certifications", "employees"
   add_foreign_key "certifications", "employees", column: "updated_by"
+  add_foreign_key "certifications", "people"
   add_foreign_key "company_units", "companies"
   add_foreign_key "company_units", "employees", column: "manager"
   add_foreign_key "contacts", "contact_types"

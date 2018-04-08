@@ -9,4 +9,5 @@ class Person < ApplicationRecord
   has_many :people_ethnicity, dependent: :destroy
   has_many :ethnicities, through: :people_ethnicity
   has_many :emergency_contacts, dependent: :destroy
+  has_many :certifications, dependent: :destroy
 end
