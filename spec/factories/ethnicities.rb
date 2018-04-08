@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :ethnicity do
-    name "NOT HISPANIC OR LATINO"
+    name { Faker::Lorem.words(1) }
   end
 end

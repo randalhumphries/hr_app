@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :race do
-    name "AMERICAN INDIAN OR PACIFIC ISLANDER"
+    name  { Faker::Lorem.words(1) }
   end
 end

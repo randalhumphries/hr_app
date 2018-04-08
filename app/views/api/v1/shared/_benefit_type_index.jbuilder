@@ -1,0 +1,1 @@
+json.benefit_types(@benefit_types)

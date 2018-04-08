@@ -1,0 +1,1 @@
+json.relationship_types(@relationship_types)

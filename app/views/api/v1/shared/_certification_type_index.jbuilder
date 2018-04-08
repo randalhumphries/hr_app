@@ -1,0 +1,1 @@
+json.certification_types(@certification_types)

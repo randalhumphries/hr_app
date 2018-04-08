@@ -1,0 +1,1 @@
+json.remuneration_types(@remuneration_types)

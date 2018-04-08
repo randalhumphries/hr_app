@@ -3,4 +3,5 @@ class EmergencyContact < ApplicationRecord
 
   belongs_to :relationship_type
   belongs_to :contact_type
+  belongs_to :person
 end

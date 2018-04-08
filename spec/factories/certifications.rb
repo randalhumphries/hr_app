@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :certification do
-    employee
+    person
     certification_type
     certification_number  "MyString"
     renewed_at            { Date.today }

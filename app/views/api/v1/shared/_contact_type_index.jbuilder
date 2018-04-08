@@ -1,0 +1,1 @@
+json.contact_types(@contact_types)
