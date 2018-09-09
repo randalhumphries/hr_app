@@ -57,4 +57,12 @@ class Api::V1Controller < ApplicationController
     # attribute of the 'doorkeeper_token' object. If it doesn't exist, return the Devise current_user object
     @current_resource_owner ||= doorkeeper_token ? User.find(doorkeeper_token.resource_owner_id) : current_user
   end
+
+  def is_admin?
+    @current_resource_owner = current_resource_owner
+
+    if @current_resource_owner.admin != true
+      not_authorized
+    end
+  end
 end
