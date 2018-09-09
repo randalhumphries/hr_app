@@ -20,3 +20,6 @@
 
 # Ignore application configuration
 /config/application.yml
+
+# RSpec examples file
+/spec/examples.txt
