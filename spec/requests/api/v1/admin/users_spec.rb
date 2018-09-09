@@ -2,31 +2,44 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::Admin::UsersController, type: :request do
 
-  let(:company)    { create(:company) }
-  let(:login_user) { create(:user, :admin, company: company) }
+  let(:company)       { create(:company) }
+  let(:other_company) { create(:company) }
+  let(:admin)         { create(:user, :admin, company: company) }
+  let(:user)          { create(:user, company: company) }
+  let(:other_user)    { create(:user, company: other_company) }
 
   before(:each) do
     @headers = { 'ACCEPT': 'application/json',  'CONTENT-TYPE': 'application/json' }
-    sign_in login_user
+    sign_in admin
   end
 
   describe "Users API Index" do
 
     it 'returns http not authorized when not signed in' do
-      sign_out login_user
+      sign_out admin
       get "/api/v1/admin/users", headers: @headers
       expect(response).to have_http_status(401)
     end
 
-    it "returns http success when signed in" do
+    it "returns http not authorized when signed in and not an admin" do
+      sign_out admin
+      sign_in user
+      get "/api/v1/admin/users", headers: @headers
+      expect(response).to have_http_status(401)
+    end
+
+    it "returns http success when signed in and an admin" do
       get "/api/v1/admin/users", headers: @headers
       expect(response).to have_http_status(200)
     end
 
     it 'returns the list of current users' do
-
-      @users = create_list(:user, 10)
-      (@users << login_user).sort!
+      @users = []
+      @users << create(:user, company: company)
+      @users << create(:user, company: company)
+      @users << create(:user, company: company)
+      @users << admin
+      @users.sort!
 
       get "/api/v1/admin/users", headers: @headers
       expect(response).to have_http_status(200)
@@ -47,25 +60,32 @@ RSpec.describe Api::V1::Admin::UsersController, type: :request do
   describe "Users API Show" do
 
     it 'returns http not authorized when not signed in' do
-      sign_out login_user
-      get "/api/v1/admin/users/#{login_user.id}", headers: @headers
+      sign_out admin
+      get "/api/v1/admin/users/#{user.id}", headers: @headers
       expect(response).to have_http_status(401)
     end
 
-    it "returns http success when signed in" do
-      get "/api/v1/admin/users/#{login_user.id}", headers: @headers
+    it "returns http not authorized when signed in and not an admin" do
+      sign_out admin
+      sign_in user
+      get "/api/v1/admin/users/#{user.id}", headers: @headers
+      expect(response).to have_http_status(401)
+    end
+
+    it "returns http success when signed in and an admin" do
+      get "/api/v1/admin/users/#{user.id}", headers: @headers
       expect(response).to have_http_status(200)
     end
 
     it "returns the details of the specified user" do
-      get "/api/v1/admin/users/#{login_user.id}", headers: @headers
+      get "/api/v1/admin/users/#{user.id}", headers: @headers
       expect(response).to have_http_status(200)
       u = JSON.parse(response.body).deep_symbolize_keys
       expect(u[:success]).to eq(true)
-      expect(u[:user][:email]).to eq(login_user.email)
-      expect(u[:user][:admin]).to eq(login_user.admin)
-      expect(u[:user][:active]).to eq(login_user.active)
-      expect(u[:user][:company_id]).to eq(login_user.company_id)
+      expect(u[:user][:email]).to eq(user.email)
+      expect(u[:user][:admin]).to eq(user.admin)
+      expect(u[:user][:active]).to eq(user.active)
+      expect(u[:user][:company_id]).to eq(user.company_id)
     end
 
   end
@@ -73,31 +93,41 @@ RSpec.describe Api::V1::Admin::UsersController, type: :request do
   describe "Users API Update" do
 
     it 'returns http not authorized when not signed in' do
-      user_params      = { id: login_user.id, email: Faker::Internet.email, company_id: company.id }
+      user_params      = { id: user.id, email: Faker::Internet.email }
       user_params_json = user_params.to_json
 
-      sign_out login_user
-      patch "/api/v1/admin/users/#{login_user.id}", params: user_params_json, headers: @headers
+      sign_out admin
+      patch "/api/v1/admin/users/#{user.id}", params: user_params_json, headers: @headers
       expect(response).to have_http_status(401)
     end
 
-    it "returns http success when signed in" do
-      user_params      = { id: login_user.id, email: Faker::Internet.email, company_id: company.id }
+    it "returns http not authorized when signed in and not an admin" do
+      user_params      = { id: user.id, email: Faker::Internet.email }
       user_params_json = user_params.to_json
 
-      patch "/api/v1/admin/users/#{login_user.id}", params: user_params_json, headers: @headers
+      sign_out admin
+      sign_in user
+      patch "/api/v1/admin/users/#{user.id}", params: user_params_json, headers: @headers
+      expect(response).to have_http_status(401)
+    end
+
+    it "returns http success when signed in and an admin" do
+      user_params      = { id: user.id, email: Faker::Internet.email }
+      user_params_json = user_params.to_json
+
+      patch "/api/v1/admin/users/#{user.id}", params: user_params_json, headers: @headers
       expect(response).to have_http_status(200)
     end
 
     it "is successful with valid parameters" do
-      user_params      = { id: login_user.id, email: Faker::Internet.email, company_id: company.id }
+      user_params      = { id: user.id, email: Faker::Internet.email }
       user_params_json = user_params.to_json
 
-      patch "/api/v1/admin/users/#{login_user.id}", params: user_params_json, headers: @headers
+      patch "/api/v1/admin/users/#{user.id}", params: user_params_json, headers: @headers
       expect(response).to have_http_status(200)
       u = JSON.parse(response.body).deep_symbolize_keys
       expect(u[:success]).to eq(true)
-      expect(u[:user][:email]).not_to eq(login_user.email)
+      expect(u[:user][:email]).not_to eq(user.email)
       expect(u[:user][:email]).to eq(user_params[:email])
     end
 
@@ -110,23 +140,36 @@ RSpec.describe Api::V1::Admin::UsersController, type: :request do
       user_params      = {
                           email: Faker::Internet.email,
                           password: password,
-                          password_confirmation: password,
-                          company_id: company.id
+                          password_confirmation: password
                         }
       user_params_json = user_params.to_json
 
-      sign_out login_user
+      sign_out admin
       post "/api/v1/admin/users/", params: user_params_json, headers: @headers
       expect(response).to have_http_status(401)
     end
 
-    it "returns http success when signed in" do
+    it "returns http not authorized when signed in and not an admin" do
       password         = Faker::Internet.password
       user_params      = {
                           email: Faker::Internet.email,
                           password: password,
-                          password_confirmation: password,
-                          company_id: company.id
+                          password_confirmation: password
+                        }
+      user_params_json = user_params.to_json
+
+      sign_out admin
+      sign_in user
+      post "/api/v1/admin/users/", params: user_params_json, headers: @headers
+      expect(response).to have_http_status(401)
+    end
+
+    it "returns http success when signed in and an admin" do
+      password         = Faker::Internet.password
+      user_params      = {
+                          email: Faker::Internet.email,
+                          password: password,
+                          password_confirmation: password
                         }
       user_params_json = user_params.to_json
 
@@ -139,8 +182,7 @@ RSpec.describe Api::V1::Admin::UsersController, type: :request do
       user_params      = {
                           email: Faker::Internet.email,
                           password: password,
-                          password_confirmation: password,
-                          company_id: company.id
+                          password_confirmation: password
                         }
       user_params_json = user_params.to_json
 
@@ -156,8 +198,7 @@ RSpec.describe Api::V1::Admin::UsersController, type: :request do
       user_params      = {
                           email: nil,
                           password: password,
-                          password_confirmation: password,
-                          company_id: company.id
+                          password_confirmation: password
                         }
       user_params_json = user_params.to_json
 
@@ -172,8 +213,7 @@ RSpec.describe Api::V1::Admin::UsersController, type: :request do
       user_params      = {
                           email: Faker::Internet.email,
                           password: nil,
-                          password_confirmation: nil,
-                          company_id: company.id
+                          password_confirmation: nil
                         }
       user_params_json = user_params.to_json
 
@@ -182,23 +222,6 @@ RSpec.describe Api::V1::Admin::UsersController, type: :request do
       u = JSON.parse(response.body).deep_symbolize_keys
       expect(u[:success]).to eq(false)
       expect(u[:errors][:password]).to eq(["can't be blank"])
-    end
-
-    it 'is not successful without a company' do
-      password         = Faker::Internet.password
-      user_params      = {
-                          email: Faker::Internet.email,
-                          password: password,
-                          password_confirmation: password,
-                          company_id: nil
-                        }
-      user_params_json = user_params.to_json
-
-      post "/api/v1/admin/users/", params: user_params_json, headers: @headers
-      expect(response).to have_http_status(200)
-      u = JSON.parse(response.body).deep_symbolize_keys
-      expect(u[:success]).to eq(false)
-      expect(u[:errors][:company]).to eq(["must exist"])
     end
 
   end

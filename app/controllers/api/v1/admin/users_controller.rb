@@ -1,15 +1,16 @@
 class Api::V1::Admin::UsersController < Api::V1Controller
 
+  before_action :is_admin?
   before_action :find_user, except: [ :index, :create ]
 
   def index
-    @users = User.all.sort
+    @users = current_resource_owner.company.users.sort
 
     render :index
   end
 
   def create
-    @user = User.new(user_params)
+    @user = current_resource_owner.company.users.new(user_params)
 
     if @user.save
       render :show
@@ -33,11 +34,11 @@ class Api::V1::Admin::UsersController < Api::V1Controller
   private
 
     def user_params
-      params.permit(:email, :password, :password_confirmation, :company_id)
+      params.permit(:email, :password, :password_confirmation)
     end
 
     def find_user
-      @user = User.find(params[:id])
+      @user = current_resource_owner.company.users.find(params[:id])
     end
 
 end
