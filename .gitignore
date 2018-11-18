@@ -22,4 +22,5 @@
 /config/application.yml
 
 # RSpec examples file
-/spec/examples.txt
+spec/examples.txt
+coverage
